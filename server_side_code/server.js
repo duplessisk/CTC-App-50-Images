@@ -7,7 +7,6 @@ const bodyParser = require("body-parser");
 const answerKeys = require("./object_types");
 const objectTypes = require("./object_types");
 const nodemailer = require("nodemailer");
-require("dotenv").config({ path: path.resolve(__dirname, './.env') });
 
 const app = express();
 
