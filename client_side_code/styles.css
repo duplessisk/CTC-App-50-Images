@@ -28,12 +28,16 @@ body {
 }
 
 #headerImage {
-    margin-left: 12%;
-    width: 80%;
+    margin-left: 16%;
+    width: 70%;
     height: auto;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
+}
+
+#headerImageDiv {
+    margin-bottom: 16.5vw;
 }
 
 /* login page */
