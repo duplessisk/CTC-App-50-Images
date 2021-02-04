@@ -96,8 +96,7 @@ body {
 
 #cellImage {
     display: inline-block;
-    max-width:130%;
-    min-width: 37%;
+    width:130%;
     height:auto;
     border: 0.25em solid rgba(248, 245, 245, 0.829);
 }
