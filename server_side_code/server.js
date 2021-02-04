@@ -49,7 +49,6 @@ app.get("/html_pages/login_page", function(request,response) {
 app.post("/html_pages/login_page", function(request,response) {
     setClientCookie(request, response);
     initClientDocument(request, response);
-    response.redirect('/html_pages/instructions_page');
 });
 
 // instructions page
@@ -218,6 +217,10 @@ function initClientDocument(request, response) {
                         lastName: request.body.lastName,
                             company: request.body.company}, {upsert: false}, 
                                 function() {});
+
+                response.redirect('/html_pages/instructions_page');
+
+
             }
         });
 
