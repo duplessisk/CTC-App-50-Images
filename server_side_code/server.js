@@ -29,7 +29,7 @@ const schema = new mongoose.Schema({
     wrongObjectsByPage: Object,
 });
 
-const Client = mongoose.model('50ImagesClients', schema);
+const Client = mongoose.model('50imagesclients', schema);
 
 console.log();
 console.log("server starting...");
@@ -48,7 +48,7 @@ app.get("/html_pages/login_page", function(request,response) {
 });
 app.post("/html_pages/login_page", function(request,response) {
     setClientCookie(request, response);
-    initClientDocument(request, response);
+    response.redirect('/html_pages/instructions_page');
 });
 
 // instructions page
@@ -57,7 +57,7 @@ app.get("/html_pages/instructions_page", function(request,response) {
         '/html_pages/instructions_page.html'));
 });
 app.post("/html_pages/instructions_page", function(request,response) {
-    response.redirect('/html_pages/page_1');
+    initClientDocument(request, response);
 });
 
 // page 1
@@ -218,7 +218,7 @@ function initClientDocument(request, response) {
                             company: request.body.company}, {upsert: false}, 
                                 function() {});
 
-                response.redirect('/html_pages/instructions_page');
+                response.redirect('/html_pages/page_1');
 
 
             }
