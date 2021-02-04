@@ -355,7 +355,7 @@ a:visited {
     color: white;
     font: bold 1vw Arial;
     margin-left: 41.5%;
-    width: 8vw;
+    width: 9vw;
     padding-left: 0.5vw;
     white-space: nowrap;
     overflow: hidden;
@@ -367,7 +367,7 @@ a:visited {
     color: white;
     font: bold 1vw Arial;
     margin-left: 1%;
-    width: 8vw;
+    width: 9vw;
     padding-left: 0.5vw;
     white-space: nowrap;
     overflow: hidden;
@@ -384,45 +384,38 @@ a:visited {
 }
 
 #objectLabel0Div {
-    margin-left: 33.75vw;
+    margin-left: 43vw;
 }
 #dataMessage0Div {
     margin-left: 3.15vw;
 }
 
 #objectLabel1Div {
-    margin-left: 42.3vw;
+    margin-left: 35.4vw;
 }
 #dataMessage1Div {
-    margin-left: 2.45vw;
+    margin-left: 3.75vw;
 }
 
 #objectLabel2Div {
-    margin-left: 34.75vw;
+    margin-left: 34.5vw;
 }
 #dataMessage2Div {
-    margin-left: 3.1vw;
+    margin-left: 3.7vw;
 }
 
 #objectLabel3Div {
-    margin-left: 33.7vw;
+    margin-left: 34.4vw;
 }
 #dataMessage3Div {
-    margin-left: 2.5vw;
-}
-
-#objectLabel4Div {
-    margin-left: 32.4vw;
-}
-#dataMessage4Div {
     margin-left: 3vw;
 }
 
-#objectLabel5Div {
-    margin-left: 36.75vw;
+#objectLabel4Div {
+    margin-left: 33.1vw;
 }
-#dataMessage5Div {
-    margin-left: 2.12vw;
+#dataMessage4Div {
+    margin-left: 3.5vw;
 }
 
 .object-type-labels, .data-message-divs {

@@ -12,22 +12,23 @@ async function main() {
     var wrongTypesMap = new Map();
     var allTypesMap = new Map();
 
-    var objTypes = [];
-    var objLabels = [];
-
     var wrongObjectPathsJson = await fetch("/static/wrong_object_paths.json");
     var wrongObjectPathsText = await wrongObjectPathsJson.text();
-    setObjectPaths(objTypes, objLabels, wrongObjectPathsText, wrongTypesMap, 
-        "Wrong");
+    setObjectPaths(wrongObjectPathsText, wrongTypesMap);
     
     var allObjectPathsJson = await fetch("/static/all_object_paths.json");
     var allObjectPathsText = await allObjectPathsJson.text();
-    setObjectPaths(objTypes, objLabels, allObjectPathsText, allTypesMap, "All");
+    setObjectPaths(allObjectPathsText, allTypesMap);
+
+    // To achieve specific object order wanted
+    objTypes = ["CTC", "ApoptoticCTC", "CK/EpCAMFoci", "WhiteBloodCell", 
+        "FluorescentArtifact"];
+    objLabels = ["Cell: CTC - ", "Non-Cell: Apoptotic CTC - ", 
+        "Non-Cell: CK/EpCAM Foci - ", "Non-Cell: White Blood Cell - ", 
+            "Non-Cell: Fluorescent Artifact - "];
 
     createObjDivs(objTypes, objLabels);
     
-    var numObjTypes = objTypes.length;
-
     var resultsJson = await fetch("/static/results_data.json");
     var resultsJsonText = await resultsJson.text();
 
@@ -36,22 +37,22 @@ async function main() {
 
     setResultsMaps(resultsJsonText,incorrectNumTypesMap,totalNumTypesMap);
 
-    setResults(numObjTypes, incorrectNumTypesMap, totalNumTypesMap);
-    createBtns(numObjTypes);
+    setResults(objTypes, incorrectNumTypesMap, totalNumTypesMap);
+    createBtns(objTypes);
 
     var showBtnsClicked = [true,true,true,true,true,true];
     var showAllBtnsClicked = [true,true,true,true,true,true];
 
     // init showBtns functionality
-    querySelectBtns(numObjTypes,".show-type-btn", "showType", "Show Wrong", 
-                    "Hide Wrong", "showAllType", "Show All", "Hide All", 8, 
-                    showBtnsClicked,showAllBtnsClicked, wrongTypesMap, "wrong",
-                    objTypes);
+    querySelectBtns(objTypes.length,".show-type-btn", "showType", 
+                    "Show Incorrect", "Hide Incorrect", "showAllType", 
+                    "Show All", "Hide All", 8, showBtnsClicked,
+                    showAllBtnsClicked, wrongTypesMap, "wrong", objTypes);
     // init showAllBtns functionaily
-    querySelectBtns(numObjTypes,".show-all-type-btn", "showAllType", "Show All",
-                    "Hide All", "showType", "Show Wrong", "Hide Wrong", 11, 
-                    showAllBtnsClicked, showBtnsClicked, allTypesMap, "all",
-                    objTypes);
+    querySelectBtns(objTypes.length,".show-all-type-btn", "showAllType", 
+                    "Show All", "Hide All", "showType", "Show Incorrect", 
+                    "Hide Incorrect", 11, showAllBtnsClicked, showBtnsClicked, 
+                    allTypesMap, "all", objTypes);
 }
 
 main();
@@ -81,11 +82,10 @@ function addScoreToPageHeader() {
  * @param {Promise} incorrectTypeBlocks - Promise obj that needs to be 
  *                                        parsed in order to obtain data
  */
-function setObjectPaths(objTypes, objLabels, objectPathsText, typesMap, 
-                        wrongOrAll) {
+function setObjectPaths(objectPathsText, typesMap) {
     var objectPathsString = filterString(objectPathsText);
-    setTypesMap(objTypes, objLabels, objectPathsString.substring(0,
-        objectPathsString.length - 1), typesMap, wrongOrAll);
+    setTypesMap(objectPathsString.substring(0,
+        objectPathsString.length - 1), typesMap);
 }
 
 /**
@@ -111,46 +111,33 @@ function filterString(objectPathsText) {
  * and the object path associated with that cell.
  * @param {String} objectPathsString - String containing all wrong object paths.
  */
-function setTypesMap(objTypes,objLabels,objectPathsString, typesMap, 
-                     wrongOrAll) {
+function setTypesMap(objectPathsString, typesMap) {
     var jsonObjArr = objectPathsString.split("}");
     // execute if block IF client got one or more objects wrong
     if (jsonObjArr[0].length != 0) { 
         for (var i = 0; i < jsonObjArr.length; i++) {
             var jsonObjSubArr = jsonObjArr[i].split(":");
-            var thisCellType = jsonObjSubArr[0].replaceAll('"','');
-            var thisCellLabel = thisCellType;
-            thisCellType = thisCellType.replaceAll(' ','');
-            thisCellType = thisCellType.replace('\n','');
+            var thisCellType = formatCellTypeString(jsonObjSubArr[0]);
             var objectPath = jsonObjSubArr[1].replaceAll('"','');
             if (typesMap.has(thisCellType)) {
                 typesMap.get(thisCellType).push(objectPath);
             } else {
                 // objTypes and objLabels populated based on all object types.
-                if (wrongOrAll == "All") {
-                    setObjLabels(thisCellLabel, objLabels);
-                    addToObjTypes(thisCellType,objTypes);
-                }
                 typesMap.set(thisCellType, new Array(objectPath)); 
             }    
         }
     }
 }
 
-function addToObjTypes(thisCellType, objTypes) {
-    if (!objTypes.includes(thisCellType)) {
-        objTypes.push(thisCellType);
-    }
-}
-
-function setObjLabels(thisCellLabel, objLabels) {
-    var thisCellLabelString = String(thisCellLabel);
-    if (thisCellLabelString.includes("CTC") && 
-        !thisCellLabelString.includes("Apoptotic")) {
-        objLabels.push("Cell: " + thisCellLabel + " -");
-    } else {
-        objLabels.push("Non-Cell: " + thisCellLabel + " -");
-    }
+/**
+ * Trims the given cellTypesString so it matches that in the objTypes Array.
+ * @param {String} cellTypeString - Cell type string to be trimmed. 
+ */
+function formatCellTypeString(cellTypeString) {
+    cellTypeString = cellTypeString.replaceAll('"','');
+    cellTypeString = cellTypeString.replaceAll(' ','');
+    cellTypeString = cellTypeString.replace('\n','');
+    return cellTypeString;
 }
 
 /**
@@ -229,6 +216,8 @@ function setNumByTypesMap(numByTypeString, numTypesMap) {
     for (var i = 0; i < numTypeArr.length; i++) {
         var numTypeSubArr = numTypeArr[i].split(":");
         var thisCellType = numTypeSubArr[0];
+        thisCellType = thisCellType.substring(0, objectPathsString.length - 1);
+        thisCellType = formatCellTypeString(thisCellType);
         var numType = numTypeSubArr[1];
         numTypesMap.set(thisCellType, Number(numType)); 
     }
@@ -238,19 +227,18 @@ function setNumByTypesMap(numByTypeString, numTypesMap) {
  * Uses information stored within totalIncorrect, incorrectNumTypesMap, and 
  * totalNumTypesMap to add the appropriate user data to the DOM.
  */
-function setResults(numObjTypes, incorrectNumTypesMap, totalNumTypesMap) {
+function setResults(objTypes, incorrectNumTypesMap, totalNumTypesMap) {
     var totalCorrect = 50;
     var totalNumQuestions = 0;
-    var incorrectNumTypesMapKeys = Array.from(incorrectNumTypesMap.keys());
-    var totalNumTypesMapKeys = Array.from(totalNumTypesMap.keys());
-    for (var i = 0; i < numObjTypes; i++) {
+
+    for (var i = 0; i < objTypes.length; i++) {
         var dataMessageDiv = document.createElement('div');
         dataMessageDiv.id = "dataMessage" + i + "Div"; 
         dataMessageDiv.className = "data-message-divs";
         var incorrectNumThisTypeValue = incorrectNumTypesMap
-            .get(incorrectNumTypesMapKeys[i]);
+            .get(objTypes[i]);
         var totalNumThisTypeValue = totalNumTypesMap
-            .get(totalNumTypesMapKeys[i]);
+            .get(objTypes[i]);
 
         totalCorrect -= incorrectNumThisTypeValue;
         totalNumQuestions += totalNumThisTypeValue;
@@ -271,15 +259,15 @@ function setResults(numObjTypes, incorrectNumTypesMap, totalNumTypesMap) {
 /**
  * Creates btn elements and adds them to the DOM
  */
-function createBtns(numObjTypes) {
-    for (var i = 0; i < numObjTypes; i++) {
+function createBtns(objTypes) {
+    for (var i = 0; i < objTypes.length; i++) {
         var showTypeBtnDiv = document.createElement('span');
         showTypeBtnDiv.className = "show-type-btn-divs";
         showTypeBtnDiv.id = "showType" + i + "BtnDiv";
         document.querySelector("#object" + i + "Div")
             .appendChild(showTypeBtnDiv);
         var showTypeBtn = document.createElement('button');
-        showTypeBtn.innerHTML = "Show Wrong";
+        showTypeBtn.innerHTML = "Show Incorrect";
         showTypeBtn.id = "showType" + i + "Btn";
         showTypeBtn.className = "show-type-btn";
         document.querySelector("#showType"+ i + "BtnDiv")
@@ -304,7 +292,7 @@ function createBtns(numObjTypes) {
         .appendChild(imgDiv);
 
         // line breaks
-        if (i < numObjTypes - 1) {
+        if (i < objTypes.length - 1) {
             var lineBreak = document.createElement('hr');
             lineBreak.className = "line-breaks";
             document.querySelector("#object" + i +"Div")
