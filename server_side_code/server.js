@@ -53,11 +53,10 @@ app.post("/html_pages/login_page", function(request,response) {
 
 // instructions page
 app.get("/html_pages/instructions_page", function(request,response) {
-    response.sendFile(path.join(__dirname + 
-        '/html_pages/instructions_page.html'));
+    initClientDocument(request, response);
 });
 app.post("/html_pages/instructions_page", function(request,response) {
-    initClientDocument(request, response);
+    response.redirect('/html_pages/page_1');
 });
 
 // page 1
@@ -218,8 +217,8 @@ function initClientDocument(request, response) {
                             company: request.body.company}, {upsert: false}, 
                                 function() {});
 
-                response.redirect('/html_pages/page_1');
-
+                response.sendFile(path.join(__dirname + 
+                    '/html_pages/instructions_page.html'));
 
             }
         });
