@@ -158,7 +158,7 @@ app.post("/html_pages/review_page", function(request,response) {
             writeResultsFile(request,totalWrongByType, numObjectsByType, 
                 wrongObjectsByType);
 
-            // sendEmailWithResults();
+            sendEmailWithResults();
 
             response.redirect('/html_pages/results_page');
         }
@@ -218,10 +218,6 @@ function initClientDocument(request, response) {
                         lastName: request.body.lastName,
                             company: request.body.company}, {upsert: false}, 
                                 function() {});
-    
-            // response.sendFile(path.join(__dirname + 
-            //     '/html_pages/instructions_page.html'));
-            // 
             }
         });
 
@@ -622,11 +618,7 @@ function writeResultsFile(request, totalWrongByType, numObjectsByType,
                         function(){});
         }
         var time = new Date();
-        if (time.getHours >= 12) {
-            time.setUTCHours(time.getUTCHours() - 8);
-        } else {
-            time.setUTCHours(time.getUTCHours());
-        }
+        time.setUTCHours(time.getUTCHours() - 8);
         fs.appendFileSync("./final_results.txt", "\n" + "Time Stamp: " 
                           + (time.toLocaleString()), function(){});
     });

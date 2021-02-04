@@ -16,8 +16,8 @@ answerKeys = [ [], [], [], [], [] ];
 //      page:   1    2    3    4    5
 answerKeys = [ [] , [] , [] , [] , [] ];
 for (var i = 0; i < objectInfo.length; i++) {
-    answerKeys[Math.floor(i/10)].push(objectInfo[i][3] == "Cell");
-    objectTypes.push(objectInfo[i][4]);
+    answerKeys[Math.floor(i/10)].push(objectInfo[i][2] == "Cell");
+    objectTypes.push(objectInfo[i][3]);
 }
 
 exports.answerKeys = answerKeys;

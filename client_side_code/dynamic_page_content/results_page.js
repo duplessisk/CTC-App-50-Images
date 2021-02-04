@@ -145,7 +145,8 @@ function addToObjTypes(thisCellType, objTypes) {
 
 function setObjLabels(thisCellLabel, objLabels) {
     var thisCellLabelString = String(thisCellLabel);
-    if (thisCellLabelString.includes("CTC")) {
+    if (thisCellLabelString.includes("CTC") && 
+        !thisCellLabelString.includes("Apoptotic")) {
         objLabels.push("Cell: " + thisCellLabel + " -");
     } else {
         objLabels.push("Non-Cell: " + thisCellLabel + " -");
