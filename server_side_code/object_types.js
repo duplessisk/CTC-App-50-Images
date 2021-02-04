@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 var objectInfo = [];
-var fileContents = fs.readFileSync(__dirname + '/50_objects_library.csv');
+var fileContents = fs.readFileSync(__dirname + '/50_images_no_AF_information.csv');
 let rows = fileContents.toString().split(new RegExp('\r?\n'));
 
 for (var i = 0; i < rows.length; i++) {

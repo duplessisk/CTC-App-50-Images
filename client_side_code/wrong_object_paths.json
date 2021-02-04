@@ -1,97 +1,101 @@
 {
-    "CTC": "/static/object_answers/object00answer.png"
+    "": "/static/object_answers/object00answer.png"
 }{
-    "CTC": "/static/object_answers/object13answer.png"
+    "": "/static/object_answers/object01answer.png"
 }{
-    "CTC": "/static/object_answers/object14answer.png"
+    "": "/static/object_answers/object02answer.png"
 }{
-    "CTC": "/static/object_answers/object16answer.png"
+    "": "/static/object_answers/object03answer.png"
 }{
-    "CTC": "/static/object_answers/object19answer.png"
+    "": "/static/object_answers/object04answer.png"
 }{
-    "CTC": "/static/object_answers/object22answer.png"
+    "": "/static/object_answers/object05answer.png"
 }{
-    "CTC": "/static/object_answers/object24answer.png"
+    "": "/static/object_answers/object06answer.png"
 }{
-    "CTC": "/static/object_answers/object28answer.png"
+    "": "/static/object_answers/object07answer.png"
 }{
-    "CTC": "/static/object_answers/object29answer.png"
+    "": "/static/object_answers/object08answer.png"
 }{
-    "CTC": "/static/object_answers/object32answer.png"
+    "": "/static/object_answers/object09answer.png"
 }{
-    "CTC": "/static/object_answers/object33answer.png"
+    "": "/static/object_answers/object10answer.png"
 }{
-    "CTC": "/static/object_answers/object34answer.png"
+    "": "/static/object_answers/object11answer.png"
 }{
-    "CTC": "/static/object_answers/object35answer.png"
+    "": "/static/object_answers/object12answer.png"
 }{
-    "CTC": "/static/object_answers/object37answer.png"
+    "": "/static/object_answers/object13answer.png"
 }{
-    "CTC": "/static/object_answers/object38answer.png"
+    "": "/static/object_answers/object14answer.png"
 }{
-    "CTC": "/static/object_answers/object39answer.png"
+    "": "/static/object_answers/object15answer.png"
 }{
-    "CTC": "/static/object_answers/object43answer.png"
+    "": "/static/object_answers/object16answer.png"
 }{
-    "CTC": "/static/object_answers/object45answer.png"
+    "": "/static/object_answers/object17answer.png"
 }{
-    "Unidentified Cell": "/static/object_answers/object01answer.png"
+    "": "/static/object_answers/object18answer.png"
 }{
-    "Unidentified Cell": "/static/object_answers/object02answer.png"
+    "": "/static/object_answers/object19answer.png"
 }{
-    "Fluorescent Artifact": "/static/object_answers/object03answer.png"
+    "": "/static/object_answers/object20answer.png"
 }{
-    "Fluorescent Artifact": "/static/object_answers/object06answer.png"
+    "": "/static/object_answers/object21answer.png"
 }{
-    "Fluorescent Artifact": "/static/object_answers/object12answer.png"
+    "": "/static/object_answers/object22answer.png"
 }{
-    "CK/EpCAM Foci": "/static/object_answers/object04answer.png"
+    "": "/static/object_answers/object23answer.png"
 }{
-    "CK/EpCAM Foci": "/static/object_answers/object05answer.png"
+    "": "/static/object_answers/object24answer.png"
 }{
-    "CK/EpCAM Foci": "/static/object_answers/object07answer.png"
+    "": "/static/object_answers/object25answer.png"
 }{
-    "CK/EpCAM Foci": "/static/object_answers/object08answer.png"
+    "": "/static/object_answers/object26answer.png"
 }{
-    "White Blood Cell": "/static/object_answers/object09answer.png"
+    "": "/static/object_answers/object27answer.png"
 }{
-    "White Blood Cell": "/static/object_answers/object25answer.png"
+    "": "/static/object_answers/object28answer.png"
 }{
-    "White Blood Cell": "/static/object_answers/object46answer.png"
+    "": "/static/object_answers/object29answer.png"
 }{
-    "White Blood Cell": "/static/object_answers/object47answer.png"
+    "": "/static/object_answers/object30answer.png"
 }{
-    "White Blood Cell": "/static/object_answers/object48answer.png"
+    "": "/static/object_answers/object31answer.png"
 }{
-    "White Blood Cell": "/static/object_answers/object49answer.png"
+    "": "/static/object_answers/object32answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object11answer.png"
+    "": "/static/object_answers/object33answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object15answer.png"
+    "": "/static/object_answers/object34answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object17answer.png"
+    "": "/static/object_answers/object35answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object18answer.png"
+    "": "/static/object_answers/object36answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object21answer.png"
+    "": "/static/object_answers/object37answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object23answer.png"
+    "": "/static/object_answers/object38answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object26answer.png"
+    "": "/static/object_answers/object39answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object27answer.png"
+    "": "/static/object_answers/object40answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object30answer.png"
+    "": "/static/object_answers/object41answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object31answer.png"
+    "": "/static/object_answers/object42answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object36answer.png"
+    "": "/static/object_answers/object43answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object40answer.png"
+    "": "/static/object_answers/object44answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object41answer.png"
+    "": "/static/object_answers/object45answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object42answer.png"
+    "": "/static/object_answers/object46answer.png"
 }{
-    "Apoptotic CTC": "/static/object_answers/object44answer.png"
+    "": "/static/object_answers/object47answer.png"
+}{
+    "": "/static/object_answers/object48answer.png"
+}{
+    "": "/static/object_answers/object49answer.png"
 }
