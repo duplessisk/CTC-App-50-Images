@@ -1,4 +1,6 @@
 {
+    "CK/EpCAM Foci": "/static/object_answers/object00answer.png"
+}{
     "CK/EpCAM Foci": "/static/object_answers/object05answer.png"
 }{
     "CK/EpCAM Foci": "/static/object_answers/object21answer.png"
@@ -27,6 +29,8 @@
 }{
     "CTC": "/static/object_answers/object09answer.png"
 }{
+    "CTC": "/static/object_answers/object10answer.png"
+}{
     "CTC": "/static/object_answers/object11answer.png"
 }{
     "CTC": "/static/object_answers/object12answer.png"
@@ -52,6 +56,8 @@
     "White Blood Cell": "/static/object_answers/object14answer.png"
 }{
     "White Blood Cell": "/static/object_answers/object18answer.png"
+}{
+    "White Blood Cell": "/static/object_answers/object20answer.png"
 }{
     "White Blood Cell": "/static/object_answers/object25answer.png"
 }{
@@ -81,9 +87,13 @@
 }{
     "Fluorescent Artifact": "/static/object_answers/object29answer.png"
 }{
+    "Fluorescent Artifact": "/static/object_answers/object30answer.png"
+}{
     "Fluorescent Artifact": "/static/object_answers/object33answer.png"
 }{
     "Fluorescent Artifact": "/static/object_answers/object37answer.png"
+}{
+    "Fluorescent Artifact": "/static/object_answers/object40answer.png"
 }{
     "Fluorescent Artifact": "/static/object_answers/object43answer.png"
 }{
