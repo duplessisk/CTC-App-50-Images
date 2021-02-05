@@ -128,51 +128,49 @@ app.post("/html_pages/review_page", function(request,response) {
     var id = request.cookies['session_id'];
 
     Client.findOne({clientId: id}, function(e, clientData) {
+        
+        var btnClicked = request.body.btn;
+        if (btnClicked == "Previous") {
+            processPage(request,5,false);
+            redirectPage(request, response, '/html_pages/page_5','','');
+        } else if (btnClicked == "pageOneNull") {
+            processPage(request, 1,false);
+            redirectPage(request, response,'','','/html_pages/page_1');
+        } else if (btnClicked == "pageTwoNull") {
+            processPage(request,2,false);
+            redirectPage(request, response,'','','/html_pages/page_2');
+        } else if (btnClicked == "pageThreeNull") {
+            processPage(request,3,false);
+            redirectPage(request, response,'','','/html_pages/page_3');
+        } else if (btnClicked == "pageFourNull") {
+            processPage(request,4,false);
+            redirectPage(request, response,'','','/html_pages/page_4');
+        } else if (btnClicked == "pageFiveNull") {
+            processPage(request,5,false);
+            redirectPage(request, response,'','','/html_pages/page_5');
+        } else if (clientData.previouslySubmitted) {
+            response.redirect('/html_pages/form_already_submitted_page');
+        } else {
 
-        setTimeout(function() {
-            var btnClicked = request.body.btn;
-            if (btnClicked == "Previous") {
-                processPage(request,5,false);
-                redirectPage(request, response, '/html_pages/page_5','','');
-            } else if (btnClicked == "pageOneNull") {
-                processPage(request, 1,false);
-                redirectPage(request, response,'','','/html_pages/page_1');
-            } else if (btnClicked == "pageTwoNull") {
-                processPage(request,2,false);
-                redirectPage(request, response,'','','/html_pages/page_2');
-            } else if (btnClicked == "pageThreeNull") {
-                processPage(request,3,false);
-                redirectPage(request, response,'','','/html_pages/page_3');
-            } else if (btnClicked == "pageFourNull") {
-                processPage(request,4,false);
-                redirectPage(request, response,'','','/html_pages/page_4');
-            } else if (btnClicked == "pageFiveNull") {
-                processPage(request,5,false);
-                redirectPage(request, response,'','','/html_pages/page_5');
-            } else if (clientData.previouslySubmitted) {
-                response.redirect('/html_pages/form_already_submitted_page');
-            } else {
-    
-                Client.findOneAndUpdate({clientId: id}, 
-                    {previouslySubmitted: true}, {upsert: false}, 
-                        function() {});
-    
-                var numObjectsByType = postAllObjectPaths();
-                [wrongObjectsByType,totalWrongByType] = 
-                    postWrongObjectPaths(clientData.wrongObjectsByPage);
-                
-                var totalIncorrect = getTotalIncorrect(totalWrongByType);
-    
-                writeResultsData(numObjectsByType, totalWrongByType, 
-                    totalIncorrect);
-                writeResultsFile(request,totalWrongByType, numObjectsByType, 
-                    wrongObjectsByType);
-    
-                sendEmailWithResults();
-    
-                response.redirect('/html_pages/results_page');
-            }
-        }, 1000*Math.random());
+            Client.findOneAndUpdate({clientId: id}, 
+                {previouslySubmitted: true}, {upsert: false}, 
+                    function() {});
+
+            var numObjectsByType = postAllObjectPaths();
+            [wrongObjectsByType,totalWrongByType] = 
+                postWrongObjectPaths(clientData.wrongObjectsByPage);
+            
+            var totalIncorrect = getTotalIncorrect(totalWrongByType);
+
+            writeResultsData(numObjectsByType, totalWrongByType, 
+                totalIncorrect);
+            writeResultsFile(request,totalWrongByType, numObjectsByType, 
+                wrongObjectsByType);
+
+            sendEmailWithResults();
+
+            response.redirect('/html_pages/results_page');
+        }
     });
 });
 
