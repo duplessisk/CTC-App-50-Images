@@ -689,8 +689,8 @@ function sendEmailWithResults(request) {
     let mailOptions = {
         from: process.env.EMAIL_SENDER_ACC,
         to: process.env.EMAIL_RECIEVER_ACC,
-        subject: 'CTC Test results_page',
-        text: firstName + " " + lastName + ' CTC App Results',
+        subject: firstName + " " + lastName + ' CTC App Results',
+        text: "50 images no AF",
         attachments: [{
             filename: 'final_results.txt',
             path: './final_results.txt'
