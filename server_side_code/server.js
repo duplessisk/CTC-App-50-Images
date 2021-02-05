@@ -167,7 +167,7 @@ app.post("/html_pages/review_page", function(request,response) {
             writeResultsFile(request,totalWrongByType, numObjectsByType, 
                 wrongObjectsByType);
 
-            sendEmailWithResults();
+            sendEmailWithResults(request);
 
             response.redirect('/html_pages/results_page');
         }
@@ -671,7 +671,13 @@ function fileContents(objectType, numObjectsByType, totalWrongByType,
 /**
  * Sends email containing final_results.text (client performance) to the admin.
  */
-function sendEmailWithResults() {
+function sendEmailWithResults(request) {
+
+    var clientInfo = request.cookies['session_id'].split(".");
+
+    firstName = clientInfo[0];
+    lastName = clientInfo[1];
+
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -684,7 +690,7 @@ function sendEmailWithResults() {
         from: process.env.EMAIL_SENDER_ACC,
         to: process.env.EMAIL_RECIEVER_ACC,
         subject: 'CTC Test results_page',
-        text: 'It works',
+        text: firstName + " " + lastName + ' CTC App Results',
         attachments: [{
             filename: 'final_results.txt',
             path: './final_results.txt'
