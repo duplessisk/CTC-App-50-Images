@@ -59,13 +59,23 @@ app.post("/html_pages/instructions_page", function(request,response) {
     response.redirect('/html_pages/page_1');
 });
 
+// instructions page 2 (after the instructions have already been viewed once)
+app.get("/html_pages/instructions_page_2", function(request,response) {
+    response.sendFile(path.join(__dirname + 
+        '/html_pages/instructions_page.html'));
+});
+app.post("/html_pages/instructions_page_2", function(request,response) {
+    response.redirect('/html_pages/page_1');
+});
+
+
 // page 1
 app.get("/html_pages/page_1", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/page_1.html'));
 });
 app.post("/html_pages/page_1", function(request,response) {
     processPage(request, 1, true);                      
-    redirectPage(request, response, '/html_pages/instructions_page', 
+    redirectPage(request, response, '/html_pages/instructions_page_2', 
         '/html_pages/page_2', '/html_pages/review_page');
 });
 
