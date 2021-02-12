@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const path = require("path");
 const fs = require("fs");
 const bodyParser = require("body-parser");
+const originalObjectNumbers = require("./object_types");
 const answerKeys = require("./object_types");
 const objectTypes = require("./object_types");
 const nodemailer = require("nodemailer");
@@ -62,7 +63,7 @@ app.post("/html_pages/instructions_page", function(request,response) {
 // instructions page 2 (after the instructions have already been viewed once)
 app.get("/html_pages/instructions_page_2", function(request,response) {
     response.sendFile(path.join(__dirname + 
-        '/html_pages/instructions_page.html'));
+        '/html_pages/instructions_page_2.html'));
 });
 app.post("/html_pages/instructions_page_2", function(request,response) {
     response.redirect('/html_pages/page_1');
@@ -222,6 +223,7 @@ function initClientDocument(request, response) {
                 });
                 
                 newClient.save();
+
                 Client.findOneAndUpdate({clientId: id}, 
                     {firstName: request.body.firstName, 
                         lastName: request.body.lastName,
@@ -483,7 +485,7 @@ function getTotalIncorrect(totalWrongByType) {
     var totalIncorrect = 0;
     var keys = Array.from(totalWrongByType.keys());
     for (var i = 0; i < keys.length; i++) {
-        totalIncorrect += totalWrongByType.get(keys[i]).length;
+        totalIncorrect += totalWrongByType.get(keys[i]);
     }
     return totalIncorrect;
 }
@@ -649,6 +651,7 @@ function writeResultsFile(request, totalWrongByType, numObjectsByType,
  */
 function fileContents(objectType, numObjectsByType, totalWrongByType,
                       wrongObjectsByType) {
+    var originalObjectNumberArr = originalObjectNumbers.originalObjectNumbers;
     var percentageIncorrect = 100*totalWrongByType.get(objectType)/
         numObjectsByType.get(objectType);
     var percentageCorrect = (100 - Math.round(percentageIncorrect));
@@ -661,8 +664,7 @@ function fileContents(objectType, numObjectsByType, totalWrongByType,
         if (i != 0) {
             granularMessage += ", ";
         }
-        granularMessage += wrongObjectsByType.get(objectType)[i]
-            .substring(29,31);
+        granularMessage += originalObjectNumberArr[wrongObjectNumberIndex];
     }
     granularMessage += "\n";
     return globalMessage + granularMessage;
