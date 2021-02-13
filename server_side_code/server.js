@@ -625,6 +625,10 @@ function writeResultsFile(request, totalWrongByType, numObjectsByType,
             function() {
         fs.appendFileSync("./final_results.txt", "Breakdown: " + "\n", 
         function() {});
+        fs.appendFileSync("./final_results.txt", "Overall Results: " + 
+            (50 - totalIncorrect) + " out of " + 50 + " (" + 
+                Math.round(100*((50-totalIncorrect)/50))
+                    + "%)" + "\n", function() {});
         var keys = Array.from(totalWrongByType.keys());
         for (var i = 0; i < keys.length; i++) {
             fs.appendFileSync("./final_results.txt", "\n" + 
@@ -664,10 +668,28 @@ function fileContents(objectType, numObjectsByType, totalWrongByType,
         if (i != 0) {
             granularMessage += ", ";
         }
-        granularMessage += originalObjectNumberArr[wrongObjectNumberIndex];
+        var wrongObjectNumber = wrongObjectsByType.get(objectType)[i]
+            .substring(29,31);
+        var wrongObjectNumberIndex = 
+            getWrongObjectNumberIndex(i,wrongObjectNumber);
+            granularMessage += originalObjectNumberArr[wrongObjectNumberIndex];
     }
     granularMessage += "\n";
     return globalMessage + granularMessage;
+}
+
+/**
+ * 
+ * @param {*} i - 
+ * @param {*} wrongObjectNumber - 
+ * @return - 
+ */
+function getWrongObjectNumberIndex(i, wrongObjectNumber) {
+    if (wrongObjectNumber.charAt(i) == '0') {
+        return Number(wrongObjectNumber.charAt(1));
+    } else {
+        return Number(wrongObjectNumber);
+    }
 }
 
 /**

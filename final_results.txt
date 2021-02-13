@@ -5,18 +5,18 @@ Company: Rarecyte
 Breakdown: 
 
 object Type CK/EpCAM Foci: Wrong 9 out of 9 (0%)
-Objects Wrong: 00, 05, 21, 22, 24, 34, 35, 38, 39
+Objects Wrong: 201, 177, 181, 182, 203, 207, 208, 192, 212
 
-object Type CTC: Wrong 15 out of 15 (0%)
-Objects Wrong: 01, 04, 06, 07, 08, 09, 10, 11, 12, 15, 16, 23, 28, 31, 36
+object Type CTC: Wrong 14 out of 14 (0%)
+Objects Wrong: 166, 167, 196, 197, 198, 199, 178, 168, 179, 180, 200, 169, 205, 170
 
 object Type Apoptotic CTC: Wrong 3 out of 3 (0%)
-Objects Wrong: 02, 03, 13
+Objects Wrong: 31, 41, 172
 
 object Type White Blood Cell: Wrong 14 out of 14 (0%)
-Objects Wrong: 14, 18, 20, 25, 26, 27, 32, 41, 42, 44, 45, 46, 47, 49
+Objects Wrong: 175, 173, 174, 183, 184, 185, 186, 164, 165, 54, 55, 56, 57, 171
 
-object Type Fluorescent Artifact: Wrong 9 out of 9 (0%)
-Objects Wrong: 17, 19, 29, 30, 33, 37, 40, 43, 48
+object Type Fluorescent Artifact: Wrong 10 out of 10 (0%)
+Objects Wrong: 79, 202, 206, 94, 116, 209, 84, 213, 176, 119
 
-Time Stamp: 2/4/2021, 9:37:19 AM
+Time Stamp: 2/12/2021, 8:13:56 AM
