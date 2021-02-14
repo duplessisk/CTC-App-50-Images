@@ -1,11 +1,11 @@
 {
-    "totalIncorrect": 50
+    "totalIncorrect": 45
 }{
-    "CK/EpCAM Foci": 9,
-    "CTC": 14,
+    "CK/EpCAM Foci": 8,
+    "CTC": 13,
     "Apoptotic CTC": 3,
-    "White Blood Cell": 14,
-    "Fluorescent Artifact": 10
+    "White Blood Cell": 13,
+    "Fluorescent Artifact": 8
 }{
     "CK/EpCAM Foci": 9,
     "CTC": 14,

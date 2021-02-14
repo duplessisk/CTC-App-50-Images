@@ -106,9 +106,11 @@ function getOriginalObjectNumber(file) {
  * @param {*} originalObjectNumber - 
  */
 function changeObjectName(objectNumbers, file, originalObjectNumber) {
-    var updatedObjectNumber = objectNumbers.get(originalObjectNumber);
-    fs.rename('./client_side_code/original_object_images/' + file, 
-        './client_side_code/final_object_images/object' + updatedObjectNumber + 
-            '.png', function(e) {
-    });
+    if (objectNumbers.has(originalObjectNumber)) {
+        var updatedObjectNumber = objectNumbers.get(originalObjectNumber);
+        fs.rename(__dirname + '/../client_side_code/original_object_images/' + file, 
+            __dirname + '/../client_side_code/final_object_images/object' + 
+                updatedObjectNumber + '.png', function(e) {
+        });
+    }
 }

@@ -165,8 +165,8 @@ app.post("/html_pages/review_page", function(request,response) {
 
             writeResultsData(numObjectsByType, totalWrongByType, 
                 totalIncorrect);
-            writeResultsFile(request,totalWrongByType, numObjectsByType, 
-                wrongObjectsByType);
+            writeResultsFile(request, totalIncorrect, totalWrongByType, 
+                numObjectsByType, wrongObjectsByType);
 
             sendEmailWithResults(request);
 
@@ -611,8 +611,8 @@ function setTotalWrongByType(totalWrongByType) {
  * @param {Map} wrongObjectsByType - Contains incorrectly answered objects 
  *                                   by type. 
  */
-function writeResultsFile(request, totalWrongByType, numObjectsByType, 
-                          wrongObjectsByType) {
+function writeResultsFile(request, totalIncorrect, totalWrongByType, 
+                          numObjectsByType, wrongObjectsByType) {
 
     var clientInfo = request.cookies['session_id'].split(".");
 
