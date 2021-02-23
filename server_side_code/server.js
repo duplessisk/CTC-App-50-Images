@@ -30,7 +30,7 @@ const schema = new mongoose.Schema({
     wrongObjectsByPage: Object,
 });
 
-const Client = mongoose.model('50imagesclients', schema);
+const Client = mongoose.model('50imagesclientsaftest1', schema);
 
 console.log();
 console.log("server starting...");
@@ -398,8 +398,8 @@ function setAllObjectPaths() {
     for (var i = 0; i < allObjectTypes.length/10; i++) {
         for (var j = 0; j < 10; j++) {
             var objectNum = String(i) + String(j);
-            var objectPath = '/static/object_answers/object' + objectNum 
-                + 'answer.png';
+            var objectPath = '/static/final_object_answers/object' + objectNum 
+                + '.png';
             var thisObjectType = allObjectTypes[Number(objectNum)];
             if (allObjectsByType.has(thisObjectType)) {
                 allObjectsByType.get(thisObjectType).push(objectPath);
@@ -444,9 +444,8 @@ function setWrongObjectPaths(wrongObjectsByPage) {
     for (var i = 0; i < 5; i++) {
         for (var j = 0; j < wrongObjectsByPage[i].length; j++) {
             var objectNum = wrongObjectsByPage[i][j];
-            var objectPath = '/static/object_answers/object' + objectNum + 
-                'answer.png';
-
+            var objectPath = '/static/final_object_answers/object' + objectNum + 
+                '.png';
             var thisObjectType = getThisObjectType(allObjectTypes,objectNum);
             if (wrongObjectsByType.has(thisObjectType)) {
                 totalWrongByType.set(thisObjectType, 
@@ -668,8 +667,7 @@ function fileContents(objectType, numObjectsByType, totalWrongByType,
         if (i != 0) {
             granularMessage += ", ";
         }
-        var wrongObjectNumber = wrongObjectsByType.get(objectType)[i]
-            .substring(29,31);
+       var wrongObjectNumber = wrongObjectsByType.get(objectType)[i].substring(35,37);
         var wrongObjectNumberIndex = 
             getWrongObjectNumberIndex(i,wrongObjectNumber);
             granularMessage += originalObjectNumberArr[wrongObjectNumberIndex];
@@ -713,7 +711,7 @@ function sendEmailWithResults(request) {
     let mailOptions = {
         from: process.env.EMAIL_SENDER_ACC,
         to: process.env.EMAIL_RECIEVER_ACC,
-        subject: firstName + " " + lastName + ' CTC App Results',
+        subject: firstName + " " + lastName + ' Prevalidation Test 2',
         text: "50 images no AF",
         attachments: [{
             filename: 'final_results.txt',

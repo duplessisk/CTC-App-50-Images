@@ -43,7 +43,7 @@ function populateObjectInfo(objectInfo,rows) {
  */
 function getFileContents() {
     var fileContents = fs.readFileSync(__dirname + 
-        '/50_objects_no_AF_information.csv');
+        '/50_images_AF_information.csv');
 
     var rows = fileContents.toString().split(new RegExp('\r?\n'));
     return rows.splice(1,rows.length - 2);
@@ -97,7 +97,7 @@ function renameObjects(objectNumbers) {
  */
 function getOriginalObjectNumber(file) {
     var originalObjectNumber = file.split('t')[1];
-    return originalObjectNumber.split('.')[0].trim();
+    return originalObjectNumber.split('_')[0].trim();
 }
 
 /**
@@ -108,9 +108,15 @@ function getOriginalObjectNumber(file) {
 function changeObjectName(objectNumbers, file, originalObjectNumber) {
     if (objectNumbers.has(originalObjectNumber)) {
         var updatedObjectNumber = objectNumbers.get(originalObjectNumber);
+        // rename object images
         fs.rename(__dirname + '/../client_side_code/original_object_images/' + file, 
             __dirname + '/../client_side_code/final_object_images/object' + 
                 updatedObjectNumber + '.png', function(e) {
         });
+        // rename object answers
+        fs.rename(__dirname + '/../client_side_code/original_object_answers/' + file, 
+        __dirname + '/../client_side_code/final_object_answers/object' + 
+            updatedObjectNumber + '.png', function(e) {
+    });
     }
 }
