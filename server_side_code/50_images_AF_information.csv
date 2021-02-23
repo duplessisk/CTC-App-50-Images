@@ -1,6 +1,6 @@
 ORIGINAL_NAME,TEST_NAME ,ANSWER,BUCKET
 Object167,object00,Cell,CTC
-Object201,object01,Cell,CK/EpCAM Foci
+Object201,object01,Not Cell,CK/EpCAM Foci
 Object176,object02,Not Cell,Fluorescent Artifact
 Object94,object03,Not Cell,Fluorescent Artifact
 Object56,object04,Not Cell,White Blood Cell
