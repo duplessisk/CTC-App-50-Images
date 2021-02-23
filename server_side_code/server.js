@@ -711,8 +711,8 @@ function sendEmailWithResults(request) {
     let mailOptions = {
         from: process.env.EMAIL_SENDER_ACC,
         to: process.env.EMAIL_RECIEVER_ACC,
-        subject: firstName + " " + lastName + ' Prevalidation Test 2',
-        text: "50 images no AF",
+        subject: firstName + " " + lastName + ' Prevalidation AF Test 1',
+        text: "50 images AF",
         attachments: [{
             filename: 'final_results.txt',
             path: './final_results.txt'
