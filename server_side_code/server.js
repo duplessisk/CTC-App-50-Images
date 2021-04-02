@@ -703,7 +703,7 @@ function getPassOrFail(totalIncorrect) {
 function fileContents(objectType, numObjectsByType, totalWrongByType,
                       wrongObjectsByType) {
 
-    var originalObjectNumberArr = objectTypes.objectTypes;
+    var originalObjectNumberArr = objectTypes.originalObjectNumbers;
     var percentageIncorrect = 100*totalWrongByType.get(objectType)/
         numObjectsByType.get(objectType);
     var percentageCorrect = (100 - Math.round(percentageIncorrect));
@@ -720,10 +720,10 @@ function fileContents(objectType, numObjectsByType, totalWrongByType,
             granularMessage += ", ";
         }
         var wrongObjectNumber = wrongObjectsByType.get(objectType)[i].substring(29,31);
-        // var wrongObjectNumberIndex =
-        //     getWrongObjectNumberIndex(i,wrongObjectNumber);
-        // granularMessage += originalObjectNumberArr[wrongObjectNumberIndex];
-        granularMessage += wrongObjectNumber;
+        var wrongObjectNumberIndex =
+            getWrongObjectNumberIndex(i,wrongObjectNumber);
+        granularMessage += originalObjectNumberArr[wrongObjectNumberIndex];
+        // granularMessage += wrongObjectNumber;
         }
     }
 
