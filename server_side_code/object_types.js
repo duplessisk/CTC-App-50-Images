@@ -58,7 +58,7 @@ function getFileContents() {
  * @param {Array} objectTypes - Contains type of each object.
  */
 function setKeys(objectNumbers,objectInfo,answerKeys,objectTypes,originalObjectNumbers) {
-    for (var i = 0; i < 8; i++) {
+    for (var i = 0; i < 5; i++) {
         for (j = 0; j < 10; j++) {
             var num;
             if (i == 0) {
@@ -84,7 +84,8 @@ function setKeys(objectNumbers,objectInfo,answerKeys,objectTypes,originalObjectN
  * @param {*} objectNumbers -
  */
 function renameObjects(objectNumbers) {
-    fs.readdirSync(__dirname + '/../client_side_code/original_object_images').forEach(function(file,e) {
+
+    fs.readdirSync('./client_side_code/original_object_images').forEach(function(file,e) {
         var originalObjectNumber = getOriginalObjectNumber(file);
         changeObjectName(objectNumbers, file, originalObjectNumber);
     });
@@ -107,9 +108,15 @@ function getOriginalObjectNumber(file) {
 function changeObjectName(objectNumbers, file, originalObjectNumber) {
     if (objectNumbers.has(originalObjectNumber)) {
         var updatedObjectNumber = objectNumbers.get(originalObjectNumber);
+        // rename object images
         fs.rename(__dirname + '/../client_side_code/original_object_images/' + file,
             __dirname + '/../client_side_code/final_object_images/object' +
                 updatedObjectNumber + '.png', function(e) {
         });
+        // rename object answers
+        fs.rename(__dirname + '/../client_side_code/original_object_answers/' + file,
+        __dirname + '/../client_side_code/final_object_answers/object' +
+            updatedObjectNumber + '.png', function(e) {
+    });
     }
 }
