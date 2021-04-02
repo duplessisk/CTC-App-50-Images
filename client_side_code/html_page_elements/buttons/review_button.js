@@ -9,7 +9,7 @@ var returnToReviewPageBtn = document.createElement('button');
 returnToReviewPageBtn.type = "submit";
 returnToReviewPageBtn.className = "btn";
 returnToReviewPageBtn.classList.add('hide');
-returnToReviewPageBtn.innerHTML = "Submit Page";
+returnToReviewPageBtn.innerHTML = "Return to Submit Page";
 returnToReviewPageBtn.id = "returnToReviewPageBtn";
 returnToReviewPageBtn.name = "btn";
 returnToReviewPageBtn.value = "returnToReviewPage";

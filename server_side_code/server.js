@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const path = require("path");
 const fs = require("fs");
 const bodyParser = require("body-parser");
+const originalObjectNumbers = require("./object_types");
 const answerKeys = require("./object_types");
 const objectTypes = require("./object_types");
 const nodemailer = require("nodemailer");
@@ -29,15 +30,10 @@ const schema = new mongoose.Schema({
     wrongObjectsByPage: Object,
 });
 
-const Client = mongoose.model('50imagesclients', schema);
+const Client = mongoose.model('50imagesclientsaftest1', schema);
 
 console.log();
 console.log("server starting...");
-
-const TEST_INFO = fs.readFileSync(__dirname + '/../client_side_code/test_info.txt', 'utf-8').split(',');
-const TEST = TEST_INFO[0]
-const TEST_VERSION = TEST_INFO[1]
-const NUM_QUESTIONS = 50
 
 // welcome page
 app.get("/", function(request,response) {
@@ -67,7 +63,7 @@ app.post("/html_pages/instructions_page", function(request,response) {
 // instructions page 2 (after the instructions have already been viewed once)
 app.get("/html_pages/instructions_page_2", function(request,response) {
     response.sendFile(path.join(__dirname + 
-        '/html_pages/instructions_page.html'));
+        '/html_pages/instructions_page_2.html'));
 });
 app.post("/html_pages/instructions_page_2", function(request,response) {
     response.redirect('/html_pages/page_1');
@@ -164,11 +160,13 @@ app.post("/html_pages/review_page", function(request,response) {
             var numObjectsByType = postAllObjectPaths();
             [wrongObjectsByType,totalWrongByType] = 
                 postWrongObjectPaths(clientData.wrongObjectsByPage);
+            
             var totalIncorrect = getTotalIncorrect(totalWrongByType);
-            writeResultsData(numObjectsByType, totalWrongByType,
+
+            writeResultsData(numObjectsByType, totalWrongByType, 
                 totalIncorrect);
-            writeResultsFile(request, totalIncorrect, totalWrongByType, numObjectsByType,
-                wrongObjectsByType);
+            writeResultsFile(request, totalIncorrect, totalWrongByType, 
+                numObjectsByType, wrongObjectsByType);
 
             sendEmailWithResults(request);
 
@@ -190,24 +188,17 @@ app.get("/html_pages/form_already_submitted_page", function(request,response) {
 
 app.listen(process.env.PORT || 3000);
 
-
 /**
  * Sets a cookie for each client.
  * @param {http} request - Client http request to the server.
  * @param {http} response - Server http response to the client.
  */
 function setClientCookie(request, response) {
-    fullName = request.body.fullName;
+    firstName = request.body.firstName;
+    lastName = request.body.lastName;
     company = request.body.company;
-    addressLineOne = request.body.addressLineOne
-    addressLineTwo = request.body.addressLineTwo
-    city = request.body.city
-    state = request.body.state
-    country = request.body.country
-    zipCode = request.body.zipCode
 
-    response.cookie("session_id", fullName + "." + company + "." + addressLineOne + "." + addressLineTwo + "." +
-        city + "." + state + "." + country + "." + zipCode);
+    response.cookie("session_id", firstName + "." + lastName + "." + company);
 }
 
 /**
@@ -232,6 +223,7 @@ function initClientDocument(request, response) {
                 });
                 
                 newClient.save();
+
                 Client.findOneAndUpdate({clientId: id}, 
                     {firstName: request.body.firstName, 
                         lastName: request.body.lastName,
@@ -406,8 +398,8 @@ function setAllObjectPaths() {
     for (var i = 0; i < allObjectTypes.length/10; i++) {
         for (var j = 0; j < 10; j++) {
             var objectNum = String(i) + String(j);
-            var objectPath = '/static/object_answers/object' + objectNum 
-                + 'answer.png';
+            var objectPath = '/static/final_object_answers/object' + objectNum 
+                + '.png';
             var thisObjectType = allObjectTypes[Number(objectNum)];
             if (allObjectsByType.has(thisObjectType)) {
                 allObjectsByType.get(thisObjectType).push(objectPath);
@@ -452,9 +444,8 @@ function setWrongObjectPaths(wrongObjectsByPage) {
     for (var i = 0; i < 5; i++) {
         for (var j = 0; j < wrongObjectsByPage[i].length; j++) {
             var objectNum = wrongObjectsByPage[i][j];
-            var objectPath = '/static/object_answers/object' + objectNum + 
-                'answer.png';
-
+            var objectPath = '/static/final_object_answers/object' + objectNum + 
+                '.png';
             var thisObjectType = getThisObjectType(allObjectTypes,objectNum);
             if (wrongObjectsByType.has(thisObjectType)) {
                 totalWrongByType.set(thisObjectType, 
@@ -619,123 +610,77 @@ function setTotalWrongByType(totalWrongByType) {
  * @param {Map} wrongObjectsByType - Contains incorrectly answered objects 
  *                                   by type. 
  */
-function writeResultsFile(request, totalIncorrect, totalWrongByType,
+function writeResultsFile(request, totalIncorrect, totalWrongByType, 
                           numObjectsByType, wrongObjectsByType) {
 
     var clientInfo = request.cookies['session_id'].split(".");
 
-    fullName = clientInfo[0];
-    company = clientInfo[1];
-    addressLineOne = clientInfo[2];
-    addressLineTwo = clientInfo[3];
-    city = clientInfo[4];
-    state = clientInfo[5];
-    country = clientInfo[6];
-    zipCode = clientInfo[7];
+    firstName = clientInfo[0];
+    lastName = clientInfo[1];
+    company = clientInfo[2];
 
-    fs.writeFile("./final_results.txt","", function() {
-        if (addressLineTwo == ""){
-            fs.appendFileSync("./final_results.txt","Test Taker: " + fullName +
-                "\n" + "\n" + "Affiliation Info: " + "\n" +  company + "\n" + addressLineOne + "\n"
-                    + city + ", " + state + ", " + country + ", " + zipCode + "\n" + "\n", function() {})
-        } else {
-            fs.appendFileSync("./final_results.txt","Test Taker: " + fullName + "\n"
-                + "\n" + "Affiliation Info: " + "\n" +  company + "\n" + addressLineOne + "\n" +
-                    addressLineTwo + "\n" + city + ", " + state + ", " + country + ", " + zipCode + "\n" + "\n",
-                        function() {})
-        }
-        fs.appendFileSync("./final_results.txt", "Test: " + TEST + "\n", function() {})
-        fs.appendFileSync("./final_results.txt", "Test Version: " + TEST_VERSION + "\n" + "\n", function() {})
-        fs.appendFileSync("./final_results.txt", "Final Result: ",function() {});
-        fs.appendFileSync("./final_results.txt", (NUM_QUESTIONS - totalIncorrect) +
-        " out of " + NUM_QUESTIONS + " (" + Math.round(100*((NUM_QUESTIONS-totalIncorrect)/NUM_QUESTIONS))
-            + "%)" + ", " + getPassOrFail(totalIncorrect) + "\n", function() {});
+    fs.writeFile("./final_results.txt", "Test Taker: " + firstName + " " + 
+        lastName + "\n" + "\n" + "Company: " + company + "\n" + "\n", 
+            function() {
+        fs.appendFileSync("./final_results.txt", "Breakdown: " + "\n", 
+        function() {});
+        fs.appendFileSync("./final_results.txt", "Overall Results: " + 
+            (50 - totalIncorrect) + " out of " + 50 + " (" + 
+                Math.round(100*((50-totalIncorrect)/50))
+                    + "%)" + "\n", function() {});
         var keys = Array.from(totalWrongByType.keys());
         for (var i = 0; i < keys.length; i++) {
-            fs.appendFileSync("./final_results.txt", "\n" +
-                fileContents(keys[i], numObjectsByType, totalWrongByType,
-                    wrongObjectsByType),
+            fs.appendFileSync("./final_results.txt", "\n" + 
+                fileContents(keys[i], numObjectsByType, totalWrongByType, 
+                    wrongObjectsByType), 
                         function(){});
         }
         var time = new Date();
-        time.setUTCHours(time.getUTCHours() - 7);
-        fs.appendFileSync("./final_results.txt", "\n" + "Time Stamp: "  + setTimeFormat(time),
-            function(){});
+        time.setUTCHours(time.getUTCHours() - 8);
+        fs.appendFileSync("./final_results.txt", "\n" + "Time Stamp: " 
+                          + (time.toLocaleString()), function(){});
     });
-}
-
-
-function setTimeFormat(time) {
-    var timeStampString = "";
-    timeStampString += time.getFullYear() + "-"
-    timeStampString += convertMonth(time.getMonth()) + "-";
-    timeStampString += time.getDate() + ", ";
-    timeStampString += time.toLocaleTimeString()
-    return timeStampString;
-}
-
-function convertMonth(month) {
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    return months[parseInt(month, 10)]
-}
-
-/**
- *
- */
-function getPassOrFail(totalIncorrect) {
-    if (totalIncorrect > 16) {
-        return "Fail"
-    } else {
-        return "Pass"
-    }
 }
 
 /**
  * Returns the breakdown of the client's performance by object type.
- * @param {String} objectType - This object's type.
+ * @param {String} objectType - This object's type. 
  * @param {Map} numObjectsByType - Contains number of objects by type.
- * @param {Map} totalWrongByType - Contains number of objects user answered
+ * @param {Map} totalWrongByType - Contains number of objects user answered 
  *                                 incorrectly by type.
- * @param {Map} wrongObjectsByType - Contains incorrectly answered objects
- *                                   by type.
+ * @param {Map} wrongObjectsByType - Contains incorrectly answered objects 
+ *                                   by type. 
  * @return - breakdown of the client's performance by object type.
  */
 function fileContents(objectType, numObjectsByType, totalWrongByType,
                       wrongObjectsByType) {
-
-    var originalObjectNumberArr = objectTypes.originalObjectNumbers;
+    var originalObjectNumberArr = originalObjectNumbers.originalObjectNumbers;
     var percentageIncorrect = 100*totalWrongByType.get(objectType)/
         numObjectsByType.get(objectType);
     var percentageCorrect = (100 - Math.round(percentageIncorrect));
-    var globalMessage = "Object Type " + objectType + ": Correct " +
-        (numObjectsByType.get(objectType) - totalWrongByType.get(objectType)) + " out of " +
-            numObjectsByType.get(objectType) + " (" + percentageCorrect + "%)"
+    var globalMessage = "object Type " + objectType + ": Wrong " + 
+        totalWrongByType.get(objectType) + " out of " + 
+            numObjectsByType.get(objectType) + " (" + percentageCorrect + "%)" 
                 + "\n";
-    var granularMessage = "Objects Missed: ";
-    if (wrongObjectsByType.get(objectType).length == 0) {
-       granularMessage += "None"
-    } else {
+    var granularMessage = "Objects Wrong: ";
     for (var i = 0; i < wrongObjectsByType.get(objectType).length; i++) {
         if (i != 0) {
             granularMessage += ", ";
         }
-        var wrongObjectNumber = wrongObjectsByType.get(objectType)[i].substring(29,31);
-        var wrongObjectNumberIndex =
+       var wrongObjectNumber = wrongObjectsByType.get(objectType)[i].substring(35,37);
+        var wrongObjectNumberIndex = 
             getWrongObjectNumberIndex(i,wrongObjectNumber);
-        granularMessage += originalObjectNumberArr[wrongObjectNumberIndex];
-        // granularMessage += wrongObjectNumber;
-        }
+            granularMessage += originalObjectNumberArr[wrongObjectNumberIndex];
     }
-
     granularMessage += "\n";
     return globalMessage + granularMessage;
 }
 
 /**
- *
- * @param {*} i -
- * @param {*} wrongObjectNumber -
- * @return -
+ * 
+ * @param {*} i - 
+ * @param {*} wrongObjectNumber - 
+ * @return - 
  */
 function getWrongObjectNumberIndex(i, wrongObjectNumber) {
     if (wrongObjectNumber.charAt(i) == '0') {
@@ -752,29 +697,31 @@ function sendEmailWithResults(request) {
 
     var clientInfo = request.cookies['session_id'].split(".");
 
-    fullName = clientInfo[0];
+    firstName = clientInfo[0];
+    lastName = clientInfo[1];
 
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.EMAIL_SENDER_ACC,
-            pass: process.env.EMAIL_SENDER_PASSWORD
+            user:process.env.EMAIL_SENDER_ACC,
+            pass:process.env.EMAIL_SENDER_PASSWORD
         }
     });
 
     let mailOptions = {
         from: process.env.EMAIL_SENDER_ACC,
         to: process.env.EMAIL_RECIEVER_ACC,
-        subject: fullName + " " + TEST_VERSION,
+        subject: firstName + " " + lastName + ' Prevalidation AF Test 1',
+        text: "50 images AF",
         attachments: [{
             filename: 'final_results.txt',
             path: './final_results.txt'
         }]
     }
 
-    transporter.sendMail(mailOptions, function (e, data) {
-        if (e) {
+    transporter.sendMail(mailOptions, function(e,data) {
+        if (error) {
             console.log(e);
-        }
+        } 
     });
 }

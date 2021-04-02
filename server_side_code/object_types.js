@@ -42,8 +42,8 @@ function populateObjectInfo(objectInfo,rows) {
  * @return - Array containing data from excel sheet.
  */
 function getFileContents() {
-    var fileContents = fs.readFileSync(__dirname +
-        '/50_images_no_AF_information.csv');
+    var fileContents = fs.readFileSync(__dirname + 
+        '/50_images_AF_information.csv');
 
     var rows = fileContents.toString().split(new RegExp('\r?\n'));
     return rows.splice(1,rows.length - 2);
@@ -51,7 +51,7 @@ function getFileContents() {
 
 /**
  * Populates the answerKeys and objectTypes arrays based on the excel sheet.
- * @param {Map} objectNumbers - contains the image number associated with
+ * @param {Map} objectNumbers - contains the image number associated with 
  *                              each object.
  * @param {Array} objectInfo - contains each row of excel data.
  * @param {Array} answerKeys - Contains the answers for each object.
@@ -80,8 +80,8 @@ function setKeys(objectNumbers,objectInfo,answerKeys,objectTypes,originalObjectN
 }
 
 /**
- *
- * @param {*} objectNumbers -
+ * 
+ * @param {*} objectNumbers - 
  */
 function renameObjects(objectNumbers) {
 
@@ -92,8 +92,8 @@ function renameObjects(objectNumbers) {
 }
 
 /**
- *
- * @param {File} file -
+ * 
+ * @param {File} file -  
  */
 function getOriginalObjectNumber(file) {
     var originalObjectNumber = file.split('t')[1];
@@ -101,21 +101,21 @@ function getOriginalObjectNumber(file) {
 }
 
 /**
- *
- * @param {*} file -
- * @param {*} originalObjectNumber -
+ * 
+ * @param {*} file - 
+ * @param {*} originalObjectNumber - 
  */
 function changeObjectName(objectNumbers, file, originalObjectNumber) {
     if (objectNumbers.has(originalObjectNumber)) {
         var updatedObjectNumber = objectNumbers.get(originalObjectNumber);
         // rename object images
-        fs.rename(__dirname + '/../client_side_code/original_object_images/' + file,
-            __dirname + '/../client_side_code/final_object_images/object' +
+        fs.rename(__dirname + '/../client_side_code/original_object_images/' + file, 
+            __dirname + '/../client_side_code/final_object_images/object' + 
                 updatedObjectNumber + '.png', function(e) {
         });
         // rename object answers
-        fs.rename(__dirname + '/../client_side_code/original_object_answers/' + file,
-        __dirname + '/../client_side_code/final_object_answers/object' +
+        fs.rename(__dirname + '/../client_side_code/original_object_answers/' + file, 
+        __dirname + '/../client_side_code/final_object_answers/object' + 
             updatedObjectNumber + '.png', function(e) {
     });
     }
