@@ -6,21 +6,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
-<body>
-    <p id="loginFormInstructions">Our records require that you enter your full name and company/institution.</p>
+<body style="background-color:rgb(232,232,232)">
+    <p id="loginFormInstructions">Please enter your Full Name and information related to your Affiliation/Institution</p>
     <form action="/html_pages/login_page" method="POST" id="form">
         <div id="loginFormDiv">
             <div class="login-fields-div">
-                <label for="firstName"></label>
-                <input id="firstName" class="login-fields" name="firstName" placeholder="First Name" required>
-            </div>
-            <div class="login-fields-div">
-                <label for="lastName"></label>
-                <input id="lastName" class="login-fields" name="lastName" placeholder="Last Name" required>
+                <label for="fullName"></label>
+                <input id="fullName" class="login-fields" name="fullName" placeholder="Full Name" required>
             </div>
             <div class="login-fields-div">
                 <label for="company"></label>
-                <input id="company" class="login-fields" name="company" placeholder="Company" required>
+                <input id="company" class="login-fields" name="company" placeholder="Affiliation Name" required>
+            </div>
+            <div class="login-fields-div">
+                <label for="addressLineOne"></label>
+                <input id="addressLineOne" class="login-fields" name="addressLineOne" placeholder="Affiliation Address Line 1" required>
+            </div>
+            <div class="login-fields-div">
+                <label for="addressLineTwo"></label>
+                <input id="addressLineTwo" class="login-fields" name="addressLineTwo" placeholder="Affiliation Address Line 2 (optional)">
+            </div>
+            <div class="login-fields-div">
+                <label for="city"></label>
+                <input id="city" class="login-fields" name="city" placeholder="City" required>
+            </div>
+            <div class="login-fields-div">
+                <label for="state"></label>
+                <input id="state" class="login-fields" name="state" placeholder="State/Province" required>
+            </div>
+            <div class="login-fields-div">
+                <label for="country"></label>
+                <input id="country" class="login-fields" name="country" placeholder="Country" required>
+            </div>
+            <div class="login-fields-div">
+                <label for="zipCode"></label>
+                <input id="zipCode" class="login-fields" name="zipCode" placeholder="Zip/Postal Code" required>
             </div>
         </div>
     </form>

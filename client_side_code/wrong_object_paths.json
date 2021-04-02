@@ -45,8 +45,6 @@
 }{
     "CTC": "/static/object_answers/object31answer.png"
 }{
-    "CTC": "/static/object_answers/object36answer.png"
-}{
     "Apoptotic CTC": "/static/object_answers/object02answer.png"
 }{
     "Apoptotic CTC": "/static/object_answers/object03answer.png"
@@ -90,6 +88,8 @@
     "Fluorescent Artifact": "/static/object_answers/object30answer.png"
 }{
     "Fluorescent Artifact": "/static/object_answers/object33answer.png"
+}{
+    "Fluorescent Artifact": "/static/object_answers/object36answer.png"
 }{
     "Fluorescent Artifact": "/static/object_answers/object37answer.png"
 }{
