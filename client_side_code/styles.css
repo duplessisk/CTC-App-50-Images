@@ -82,7 +82,7 @@ body {
 }
 
 .checkboxes-container {
-    margin-left: -8.7%;
+    margin-left: -10.7%;
     max-width: 30%;
     background: rgba(100, 98, 98, 0.856);
     padding-left: 0.5vw;
@@ -92,7 +92,7 @@ body {
 }
 
 .cell-image-row-container {
-    width : 37%;
+    width : 45%;
     height : 0%;
     margin: -1px;
     margin-left: 1%;
@@ -435,5 +435,11 @@ a:visited {
 .line-breaks {
     height: 1px;
     background-color:rgba(100, 98, 98, 0.856);
+}
+
+#sampleDiv {
+    display: block;
+    margin-top: 0.4vw;
+    margin-left: 45.4vw;
 }
 

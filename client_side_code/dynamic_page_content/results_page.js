@@ -247,8 +247,15 @@ function setResults(objTypes, incorrectNumTypesMap, totalNumTypesMap) {
             (totalNumThisTypeValue - incorrectNumThisTypeValue) + " out of " + 
                 totalNumThisTypeValue;
 
+        var sampleDiv = document.createElement('div')
+        sampleDiv.id = "sampleDiv";
+        sampleDiv.innerHTML = "sample message"
+
         document.querySelector("#objectInfo" + i + "Div")
             .appendChild(dataMessageDiv);
+
+        document.querySelector("#objectInfo" + i + "Div")
+            .appendChild(sampleDiv);
     }
     document.querySelector("#overallScore").innerHTML = "Score: " + 
         Math.round(100*(totalCorrect/totalNumQuestions)) + "%";
