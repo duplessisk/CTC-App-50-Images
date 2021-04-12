@@ -50,9 +50,8 @@ function redirectPage(btn) {
 function writeReviewMessage() {
     var reviewMessage = document.createElement('p');
     reviewMessage.id = "reviewMessage";
-    reviewMessage.innerHTML = "You can't submit this form twice, so please" + 
-        " go back and review your answers. Any unanswered questions will be" +  
-            " marked as incorrect.";
+    reviewMessage.innerHTML = "All objects have been reviewed. The test can only be submitted once, please review " +
+        "before pressing the 'submit' button";
     document.querySelector("#reviewMessageHeaderDiv")
         .appendChild(reviewMessage);
 }
@@ -83,7 +82,8 @@ function getNullPages() {
 function findPagesWithSkippedQuestions(pagesContainSkippedQuestions) {
     if (pagesContainSkippedQuestions.includes("true")) {
         var skippedPages = document.createElement('p');
-        skippedPages.innerHTML = "You didn't answer questions on the following page(s): ";
+        skippedPages.innerHTML = "Note: There are at least one unassigned object on the following page(s). " +
+            "Click the page to complete your test.";
         skippedPages.className = "review-page-messages";
         document.querySelector("#reviewMessageResultsDiv").appendChild(skippedPages);
     }

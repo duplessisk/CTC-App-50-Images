@@ -48,6 +48,7 @@ body {
 }
 
 #loginFormDiv {
+    margin-top: 2vw;
     margin-left: 41.16%;
     margin-bottom: -1.5vw;
 }
@@ -194,7 +195,7 @@ body {
 
 /* login page */
 #resetLoginBtnDiv {
-    margin-left: 36.75%;
+    margin-left: 37%;
 }
 
 .right-btn-div {
@@ -337,8 +338,8 @@ a:visited {
 }
 
 #resultsImg {
-    width: 60%;
-    margin-left: 20%;
+    width: 70%;
+    margin-left: 15vw;
 }
 
 #bottomPadding {   
@@ -350,38 +351,42 @@ a:visited {
 }
 
 .message-div {
-    padding-top: 2%;
-    text-align: center;
-    font-size: 2vw; 
-}
-
-.show-type-btn {
-    cursor: pointer;
-    background: RGB(180,91,56);
-    color: white;
-    font: bold 1vw Arial;
-    margin-left: 41.5%;
-    width: 9vw;
-    padding-left: 0.5vw;
-    white-space: nowrap;
-    overflow: hidden;
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+    font: 1.75vw Arial;
+    margin-left: 15vw;
 }
 
 .show-all-type-btn {
     cursor: pointer;
     background: RGB(180,91,56);
     color: white;
-    font: bold 1vw Arial;
-    margin-left: 1%;
-    width: 9vw;
-    padding-left: 0.5vw;
+    font: bold 1.25vw Arial;
+    /*margin-left: 41.5%;*/
+    width: 12vw;
+    padding: 0.25vw;
+    border-radius: 10%;
+    /*padding-left: 0.5vw;*/
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.show-incorrect-type-btn {
+    cursor: pointer;
+    background: RGB(180,91,56);
+    color: white;
+    font: bold 1.25vw Arial;
+    /*margin-left: 41.5%;*/
+    width: 12vw;
+    padding: 0.29vw;
+    border-radius: 10%;
+    /*padding-left: 0.5vw;*/
     white-space: nowrap;
     overflow: hidden;
 }
 
 #objectsDiv {
-    font-family: Arial;
-    font-size: 1.15vw;
+    font: bold 1.5vw Arial;
     margin-top: 15vw;
 }
 
@@ -425,21 +430,59 @@ a:visited {
 }
 
 .object-type-labels, .data-message-divs {
-    display: inline-flex;
-}
-
-.show-all-type-btn, .show-type-btn {
     display: inline-block;
 }
 
-.line-breaks {
-    height: 1px;
-    background-color:rgba(100, 98, 98, 0.856);
+.object-div {
+    margin-bottom: 2vw;
 }
 
-#sampleDiv {
-    display: block;
-    margin-top: 0.4vw;
-    margin-left: 45.4vw;
+.results-table-row {
+  /*border: 1px solid black;*/
+  table-layout: fixed;
+  /*width: 300px;*/
+  margin-left: 4vw;
+}
+
+th,
+td {
+  /*border: 1px solid black;*/
+  width: 15vw;
+  overflow: hidden;
+}
+
+.right-flushed-row {
+    text-align: center;
+}
+
+.left-padded-column {
+    margin-left: 15vw;
+}
+
+.show-all-button-div {
+    margin-left: 1.5vw;
+}
+
+.show-incorrect-button-div {
+    margin-left: 0.5vw;
+}
+
+.results-header-buffer {
+    margin-bottom: 1vw;
+}
+
+.results-header-labels {
+    font: bold 1.75vw Arial;
+}
+
+.results-row-buffer {
+    height: 0.1vw;
+    background-color: grey;
+}
+
+.results-header-line {
+    height: 0.5vw;
+    background-color: black;
+    margin-top: -0.005vw;
 }
 

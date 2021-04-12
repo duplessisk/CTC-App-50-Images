@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="before deletion">
+    <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="first edits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client_side_code/dynamic_page_content/results_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/dynamic_page_content/results_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/dynamic_page_content/review_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/dynamic_page_content/review_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client_side_code/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final_results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final_results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_side_code/html_pages/login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/server_side_code/html_pages/login_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +65,8 @@
       <updated>1617320067105</updated>
       <workItem from="1617320068542" duration="5668000" />
       <workItem from="1617328732548" duration="3482000" />
+      <workItem from="1618073965568" duration="180000" />
+      <workItem from="1618157130082" duration="25927000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1617323924111</created>
@@ -113,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617334754113</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="first edits">
+      <created>1617949147642</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1617949147642</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +151,7 @@
     <MESSAGE value="ya" />
     <MESSAGE value="more changes" />
     <MESSAGE value="before deletion" />
-    <option name="LAST_COMMIT_MESSAGE" value="before deletion" />
+    <MESSAGE value="first edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="first edits" />
   </component>
 </project>
