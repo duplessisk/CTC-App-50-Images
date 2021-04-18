@@ -23,7 +23,7 @@ async function main() {
     // To achieve specific object order wanted
     const objTypes = ["CTC", "ApoptoticCTC", "CK/EpCAMFoci", "WhiteBloodCell",
         "FluorescentArtifact"];
-    const objLabels = ["Cell", "Non-Cell", "Non-Cell", "Non-Cell", "Non-Cell"];
+    const objLabels = ["Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell"];
     const objDescription = ["CTC", "Apoptotic CTC", "CK/EpCAM Foci", "White Blood Cell", "Fluorescent Artifact"];
 
     createObjDivs(objTypes);
@@ -417,7 +417,8 @@ function addObjectsToDom(objNum, typesMap, objectType, objTypes) {
             messageDiv.className = "message-div";
             messageDiv.id = "messageDiv";
     
-            var objectNum = objectPaths[i].substring(36,38);
+            var objectNum = addOneToObjectNum(objectPaths[i].substring(36,38));
+
             var objectPath = objectPaths[i];
 
             var newImg = document.createElement('img');
@@ -434,5 +435,18 @@ function addObjectsToDom(objNum, typesMap, objectType, objTypes) {
             document.querySelector("#imgDiv" + objNum)
                 .appendChild(newImg);
         }
+    }
+}
+
+function addOneToObjectNum(objectNum) {
+    if (objectNum[0] == '0') {
+        objectNum = Number(objectNum[1]) + 1;
+        if (objectNum < 10) {
+            return '0' + String(objectNum);
+        } else {
+            return objectNum;
+        }
+    } else {
+        return Number(objectNum) + 1
     }
 }

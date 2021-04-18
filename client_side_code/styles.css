@@ -28,7 +28,7 @@ body {
 }
 
 #headerImage {
-    margin-left: 8%;
+    margin-left: 11.5%;
     width: 80%;
     height: auto;
     position: fixed;
@@ -440,6 +440,7 @@ a:visited {
 .results-table-row {
   /*border: 1px solid black;*/
   table-layout: fixed;
+    color: RGB(61,69,67);
   /*width: 300px;*/
   margin-left: 4vw;
 }
@@ -473,16 +474,17 @@ td {
 
 .results-header-labels {
     font: bold 1.75vw Arial;
+    color: RGB(61,69,67);
 }
 
 .results-row-buffer {
     height: 0.1vw;
-    background-color: grey;
+    background-color: RGB(178,178,178);
 }
 
 .results-header-line {
     height: 0.5vw;
-    background-color: black;
+    background-color: RGB(178,178,178);
     margin-top: -0.005vw;
 }
 
