@@ -59,11 +59,8 @@ body {
 
 .login-fields {
     width: 27.9%;
-    /*border: 2px solid rgba(100, 98, 98, 0.856); !* grey *! */
     border: 1.1px solid black; /* grey */
     border-radius: 0.15vw;
-    /*box-shadow: 5px 10px #888888;*/
-    /*box-shadow: 1px 1px 1px 1px #888888;*/
     font-family: Arial;
     font-size: 1vw;
     padding: 0.35vw;
@@ -324,6 +321,7 @@ a:visited {
 }
 
 #overallScore {
+    text-align: center;
     margin-top: 1.5vw;
     margin-bottom: 0.75vw;
 }
