@@ -2,13 +2,126 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="more changes">
+      <change afterPath="$PROJECT_DIR$/server_side_code/50_objects_information.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object00.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object00.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object01.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object02.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object03.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object04.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object05.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object06.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object07.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object08.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object09.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object09.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object10.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object11.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object12.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object13.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object14.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object15.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object16.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object17.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object18.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object19.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object20.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object21.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object22.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object23.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object24.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object25.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object26.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object27.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object28.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object29.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object30.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object31.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object32.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object33.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object34.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object35.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object36.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object37.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object38.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object39.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object39.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object40.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object41.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object41.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object42.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object42.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object43.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object43.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object44.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object44.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object45.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object46.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object46.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object47.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object47.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object48.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object48.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_answers/object49.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object49.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object00.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object00.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object01.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object02.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object03.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object04.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object05.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object06.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object07.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object08.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object09.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object09.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object10.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object11.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object12.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object13.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object14.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object15.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object16.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object17.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object18.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object19.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object20.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object21.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object22.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object23.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object24.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object25.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object26.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object27.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object28.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object29.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object30.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object31.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object32.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object33.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object34.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object35.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object36.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object37.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object38.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object39.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object39.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object40.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object41.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object41.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object42.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object42.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object43.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object43.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object44.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object44.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object45.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object46.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object46.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object47.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object47.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object48.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object48.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/object49.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/object49.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/preview_images/decision_tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/preview_images/decision_tree.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/preview_images/instructions.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/preview_images/instructions.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client_side_code/preview_images/title_slide.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/preview_images/title_slide.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_side_code/50_objects_AF_information.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_side_code/object_types.js" beforeDir="false" afterPath="$PROJECT_DIR$/server_side_code/object_types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="test1AF" />
@@ -16,17 +129,29 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test1AF" />
+        <entry key="$PROJECT_DIR$" value="prevalidation-af" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1qaaHQAhlDbWkhr2hGQ9bOqCXr7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -53,6 +178,12 @@
       <updated>1617320067105</updated>
       <workItem from="1617320068542" duration="5668000" />
       <workItem from="1617328732548" duration="3482000" />
+      <workItem from="1618073965568" duration="180000" />
+      <workItem from="1618157130082" duration="27885000" />
+      <workItem from="1618241977948" duration="19000" />
+      <workItem from="1618719676910" duration="6715000" />
+      <workItem from="1618859722850" duration="2386000" />
+      <workItem from="1618872047277" duration="432000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1617323924111</created>
@@ -103,11 +234,56 @@
       <option name="project" value="LOCAL" />
       <updated>1617334754113</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="first edits">
+      <created>1617949147642</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1617949147642</updated>
+    </task>
+    <task id="LOCAL-00009" summary="first changes">
+      <created>1618200494563</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1618200494563</updated>
+    </task>
+    <task id="LOCAL-00010" summary="more changes">
+      <created>1618722493070</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1618722493070</updated>
+    </task>
+    <task id="LOCAL-00011" summary="more changes">
+      <created>1618723430971</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1618723430971</updated>
+    </task>
+    <task id="LOCAL-00012" summary="more changes">
+      <created>1618793830342</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1618793830342</updated>
+    </task>
+    <task id="LOCAL-00013" summary="more changes">
+      <created>1618861481158</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1618861481158</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -122,9 +298,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="d" />
     <MESSAGE value="dd" />
     <MESSAGE value="ya" />
+    <MESSAGE value="before deletion" />
+    <MESSAGE value="first edits" />
+    <MESSAGE value="first changes" />
     <MESSAGE value="more changes" />
     <option name="LAST_COMMIT_MESSAGE" value="more changes" />
   </component>
