@@ -21,13 +21,12 @@ async function main() {
     setObjectPaths(allObjectPathsText, allTypesMap);
 
     // To achieve specific object order wanted
-    objTypes = ["CTC", "ApoptoticCTC", "CK/EpCAMFoci", "WhiteBloodCell", 
+    const objTypes = ["CTC", "ApoptoticCTC", "CK/EpCAMFoci", "WhiteBloodCell",
         "FluorescentArtifact"];
-    objLabels = ["Cell: CTC - ", "Non-Cell: Apoptotic CTC - ", 
-        "Non-Cell: CK/EpCAM Foci - ", "Non-Cell: White Blood Cell - ", 
-            "Non-Cell: Fluorescent Artifact - "];
+    const objLabels = ["Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell"];
+    const objDescription = ["CTC", "Apoptotic CTC", "CK/EpCAM Foci", "White Blood Cell", "Fluorescent Artifact"];
 
-    createObjDivs(objTypes, objLabels);
+    createObjDivs(objTypes);
     
     var resultsJson = await fetch("/static/results_data.json");
     var resultsJsonText = await resultsJson.text();
@@ -37,20 +36,20 @@ async function main() {
 
     setResultsMaps(resultsJsonText,incorrectNumTypesMap,totalNumTypesMap);
 
-    setResults(objTypes, incorrectNumTypesMap, totalNumTypesMap);
+    setResults(objTypes, objLabels, objDescription, incorrectNumTypesMap, totalNumTypesMap);
     createBtns(objTypes);
 
     var showBtnsClicked = [true,true,true,true,true,true];
     var showAllBtnsClicked = [true,true,true,true,true,true];
 
     // init showBtns functionality
-    querySelectBtns(objTypes.length,".show-type-btn", "showType", 
+    querySelectBtns(objTypes.length,".show-incorrect-type-btn", "showIncorrectType",
                     "Show Incorrect", "Hide Incorrect", "showAllType", 
-                    "Show All", "Hide All", 8, showBtnsClicked,
+                    "Show All", "Hide All", 17, showBtnsClicked,
                     showAllBtnsClicked, wrongTypesMap, "wrong", objTypes);
     // init showAllBtns functionaily
     querySelectBtns(objTypes.length,".show-all-type-btn", "showAllType", 
-                    "Show All", "Hide All", "showType", "Show Incorrect", 
+                    "Show All", "Hide All", "showIncorrectType", "Show Incorrect",
                     "Hide Incorrect", 11, showAllBtnsClicked, showBtnsClicked, 
                     allTypesMap, "all", objTypes);
 }
@@ -144,30 +143,24 @@ function formatCellTypeString(cellTypeString) {
  * Creates a Div for each object type.
  * @param {Array} objTypes - Contains all of the object types.
  */
-function createObjDivs(objTypes, objLabels) {
+function createObjDivs(objTypes) {
     for (var i = 0; i < objTypes.length; i++) {
-
-        objectDiv = document.createElement('div');
+        const objectDiv = document.createElement('div');
         objectDiv.id = "object" + i + "Div";
+        objectDiv.className = "object-div";
         document.querySelector("#objectsDiv").appendChild(objectDiv);
-    
+
+        // setHeaders(i)
+
         objectInfoDiv = document.createElement('div');
         objectInfoDiv.id = "objectInfo" + i + "Div";
         objectInfoDiv.className = "object-info-div";
         document.querySelector("#object" + i + "Div").appendChild(objectInfoDiv);
-    
+
         var objectHeaderDiv = document.createElement('div');
         objectHeaderDiv.id = "objectHeader" + i + "Div";
         objectHeaderDiv.className = "object-header-divs";
-        document.querySelector("#object" + i + "Div").appendChild(objectHeaderDiv); 
-    
-        // object type 
-        var objectTypeLabel = document.createElement('div');
-        objectTypeLabel.id = "objectLabel" + i + "Div";
-        objectTypeLabel.innerHTML = objLabels[i];
-        objectTypeLabel.className = "object-type-labels";
-        document.getElementById("objectInfo"+ i +"Div")
-            .appendChild(objectTypeLabel);
+        document.querySelector("#object" + i + "Div").appendChild(objectHeaderDiv);
     }
 }
 
@@ -223,33 +216,98 @@ function setNumByTypesMap(numByTypeString, numTypesMap) {
     }
 }
 
+function createResultsHeader() {
+    const resultsHeader = document.createElement('table');
+    resultsHeader.classList.add("results-table-row","results-header-labels");
+    const row = resultsHeader.insertRow(0);
+    row.insertCell(0).innerHTML = "OBJECT";
+    row.insertCell(1).innerHTML = "DESCRIPTION";
+    const totalCount = row.insertCell(2);
+    totalCount.className = "right-flushed-row";
+    totalCount.innerHTML = "COUNT";
+    const totalCorrect = row.insertCell(3);
+    totalCorrect.className = "right-flushed-row";
+    totalCorrect.innerHTML = "CORRECT";
+    document.querySelector("#object0Div").appendChild(resultsHeader)
+
+    const resultsHeaderLine = document.createElement('hr');
+    resultsHeaderLine.className = "results-header-line";
+    document.querySelector("#object0Div").appendChild(resultsHeaderLine)
+
+    const resultsHeaderBuffer = document.createElement('div');
+    resultsHeaderBuffer.className = 'results-header-buffer'
+    document.querySelector("#object0Div").appendChild(resultsHeaderBuffer)
+
+}
+
+function createResultsRow(i, objLabels, objDescription, totalNumThisTypeValue, incorrectNumThisTypeValue) {
+    var resultsTable = document.createElement('table');
+    resultsTable.className = 'results-table-row'
+    document.querySelector("#object" + i + "Div").appendChild(resultsTable)
+    var resultsRow = resultsTable.insertRow(0);
+    resultsRow.insertCell(0).innerHTML = objLabels[i];
+    resultsRow.insertCell(1).innerHTML = objDescription[i]
+    const totalNumThisType = resultsRow.insertCell(2);
+    totalNumThisType.classList.add("right-flushed-row", "total-count-column");
+    totalNumThisType.innerHTML = totalNumThisTypeValue;
+    const numIncorrectThisType = resultsRow.insertCell(3);
+    numIncorrectThisType.className = "right-flushed-row";
+    numIncorrectThisType.innerHTML = Number(totalNumThisTypeValue) - Number(incorrectNumThisTypeValue);
+
+    const showAllButtonColumn = resultsRow.insertCell(4);
+    showAllButtonColumn.id = "showAllButtonColumn" + i;
+    showAllButtonColumn.className = "right-flushed-row";
+
+    const showIncorrectButtonColumn = resultsRow.insertCell(5);
+    showIncorrectButtonColumn.id = "showIncorrectButtonColumn" + i;
+    showIncorrectButtonColumn.classList.add("right-flushed-row", "left-padded-column");
+
+    const showAllButtonDiv = document.createElement('div');
+    showAllButtonDiv.className = "show-all-button-div";
+    showAllButtonDiv.id = "showAllButtonDiv" + i
+    document.querySelector("#showAllButtonColumn" + i)
+        .appendChild(showAllButtonDiv);
+
+    const showIncorrectButtonDiv = document.createElement('div');
+    showIncorrectButtonDiv.className = "show-incorrect-button-div";
+    showIncorrectButtonDiv.id = "showIncorrectButtonDiv" + i;
+    document.querySelector("#showIncorrectButtonColumn" + i)
+        .appendChild(showIncorrectButtonDiv);
+
+}
 /**
  * Uses information stored within totalIncorrect, incorrectNumTypesMap, and 
  * totalNumTypesMap to add the appropriate user data to the DOM.
  */
-function setResults(objTypes, incorrectNumTypesMap, totalNumTypesMap) {
+function setResults(objTypes, objLabels, objDescription, incorrectNumTypesMap, totalNumTypesMap) {
     var totalCorrect = 50;
     var totalNumQuestions = 0;
 
+    createResultsHeader()
+
     for (var i = 0; i < objTypes.length; i++) {
-        var dataMessageDiv = document.createElement('div');
-        dataMessageDiv.id = "dataMessage" + i + "Div"; 
-        dataMessageDiv.className = "data-message-divs";
         var incorrectNumThisTypeValue = incorrectNumTypesMap
             .get(objTypes[i]);
         var totalNumThisTypeValue = totalNumTypesMap
             .get(objTypes[i]);
 
+        createResultsRow(i, objLabels, objDescription, totalNumThisTypeValue, incorrectNumThisTypeValue);
+
+        const imgDiv = document.createElement('div');
+        imgDiv.className = "img-div";
+        imgDiv.id = "imgDiv" + i;
+        document.querySelector("#object" + i + "Div").appendChild(imgDiv)
+
+        if (i != objTypes.length - 1) {
+            const resultsRowBuffer = document.createElement('hr');
+            resultsRowBuffer.className = "results-row-buffer";
+            document.querySelector("#object" + i + "Div").appendChild(resultsRowBuffer)
+        }
+
         totalCorrect -= incorrectNumThisTypeValue;
         totalNumQuestions += totalNumThisTypeValue;
-
-        dataMessageDiv.innerHTML = 
-            (totalNumThisTypeValue - incorrectNumThisTypeValue) + " out of " + 
-                totalNumThisTypeValue;
-
-        document.querySelector("#objectInfo" + i + "Div")
-            .appendChild(dataMessageDiv);
     }
+
     document.querySelector("#overallScore").innerHTML = "Score: " + 
         Math.round(100*(totalCorrect/totalNumQuestions)) + "%";
     document.querySelector("#overallAnsweredCorrect").innerHTML = totalCorrect +
@@ -261,28 +319,18 @@ function setResults(objTypes, incorrectNumTypesMap, totalNumTypesMap) {
  */
 function createBtns(objTypes) {
     for (var i = 0; i < objTypes.length; i++) {
-        var showTypeBtnDiv = document.createElement('span');
-        showTypeBtnDiv.className = "show-type-btn-divs";
-        showTypeBtnDiv.id = "showType" + i + "BtnDiv";
-        document.querySelector("#object" + i + "Div")
-            .appendChild(showTypeBtnDiv);
-        var showTypeBtn = document.createElement('button');
-        showTypeBtn.innerHTML = "Show Incorrect";
-        showTypeBtn.id = "showType" + i + "Btn";
-        showTypeBtn.className = "show-type-btn";
-        document.querySelector("#showType"+ i + "BtnDiv")
-            .appendChild(showTypeBtn);
+        var showIncorrectTypeBtn = document.createElement('button');
+        showIncorrectTypeBtn.innerHTML = "Show Incorrect";
+        showIncorrectTypeBtn.id = "showIncorrectType" + i + "Btn";
+        showIncorrectTypeBtn.classList.add("show-type-btn", "show-incorrect-type-btn")
+        document.querySelector("#showIncorrectButtonDiv" + i)
+            .appendChild(showIncorrectTypeBtn);
 
-        var showAllTypeBtnDiv = document.createElement('span');
-        showAllTypeBtnDiv.className = "show-all-type-btn-divs";
-        showAllTypeBtnDiv.id = "showAllType" + i + "BtnDiv";
-        document.querySelector("#object" + i +"Div")
-            .appendChild(showAllTypeBtnDiv);
         var showAllTypeBtn = document.createElement('button');
         showAllTypeBtn.innerHTML = "Show All";
         showAllTypeBtn.id = "showAllType" + i + "Btn";
-        showAllTypeBtn.className = "show-all-type-btn";
-        document.querySelector("#showAllType" + i + "BtnDiv")
+        showAllTypeBtn.classList.add("show-type-btn", "show-all-type-btn")
+        document.querySelector("#showAllButtonDiv" + i)
             .appendChild(showAllTypeBtn);
 
         // objects divs 
@@ -290,14 +338,6 @@ function createBtns(objTypes) {
         imgDiv.id = "img" + i + "Div";
         document.querySelector("#object" + i +"Div")
         .appendChild(imgDiv);
-
-        // line breaks
-        if (i < objTypes.length - 1) {
-            var lineBreak = document.createElement('hr');
-            lineBreak.className = "line-breaks";
-            document.querySelector("#object" + i +"Div")
-            .appendChild(lineBreak);
-        }
     }
 }
 
@@ -344,7 +384,7 @@ function querySelectBtns(numObjTypes, thisBtnClass, thisBtnId, thisShowMsg,
                             .innerHTML == otherHideMsg) {
                         document.getElementById(otherBtnId + objNum + "Btn")
                             .innerHTML = otherShowMsg;
-                        document.querySelector("#img" + objNum + "Div")
+                        document.querySelector("#imgDiv" + objNum)
                             .innerHTML = '';
                         otherBtnsClicked[objNum] = true;
                     }
@@ -353,7 +393,7 @@ function querySelectBtns(numObjTypes, thisBtnClass, thisBtnId, thisShowMsg,
                 } else { // hide objects for show btn
                     document.getElementById(thisBtnId + objNum + "Btn")
                         .innerHTML = thisShowMsg;
-                    document.querySelector("#img" + objNum + "Div")
+                    document.querySelector("#imgDiv" + objNum)
                         .innerHTML = '';
                         thisBtnsClicked[objNum] = true;
                 }
@@ -377,23 +417,36 @@ function addObjectsToDom(objNum, typesMap, objectType, objTypes) {
             messageDiv.className = "message-div";
             messageDiv.id = "messageDiv";
     
-            var objectNum = objectPaths[i].substring(36,38);
+            var objectNum = addOneToObjectNum(objectPaths[i].substring(36,38));
+
             var objectPath = objectPaths[i];
 
             var newImg = document.createElement('img');
             newImg.src = objectPath;
             newImg.id="resultsImg";
-    
+
             if (objectType == "wrong") {
-                messageDiv.innerHTML = "You got object  " + objectNum + 
-                    " incorrect";
+                messageDiv.innerHTML = "Object  " + objectNum;
             } else {
                 messageDiv.innerHTML = "Object  " + objectNum;
             }
-            document.querySelector("#img" + objNum + "Div")
+            document.querySelector("#imgDiv" + objNum)
                 .appendChild(messageDiv);
-            document.querySelector("#img" + objNum + "Div")
+            document.querySelector("#imgDiv" + objNum)
                 .appendChild(newImg);
         }
+    }
+}
+
+function addOneToObjectNum(objectNum) {
+    if (objectNum[0] == '0') {
+        objectNum = Number(objectNum[1]) + 1;
+        if (objectNum < 10) {
+            return '0' + String(objectNum);
+        } else {
+            return objectNum;
+        }
+    } else {
+        return Number(objectNum) + 1
     }
 }

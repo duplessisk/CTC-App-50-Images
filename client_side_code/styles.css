@@ -21,15 +21,15 @@ body {
 }
 
 #instructionsImage {
-    margin-left: 12%;
+    margin-left: 10.75%;
     width: 80%;
     height: auto;
     top: 0;
 }
 
 #headerImage {
-    margin-left: 15.20%;
-    width: 70%;
+    margin-left: 11.5%;
+    width: 80%;
     height: auto;
     position: fixed;
     top: 0;
@@ -37,7 +37,7 @@ body {
 }
 
 #headerImageDiv {
-    margin-bottom: 14.25vw;
+    margin-bottom: 16.5vw;
 }
 
 /* login page */
@@ -48,6 +48,7 @@ body {
 }
 
 #loginFormDiv {
+    margin-top: 2vw;
     margin-left: 41.16%;
     margin-bottom: -1.5vw;
 }
@@ -58,11 +59,8 @@ body {
 
 .login-fields {
     width: 27.9%;
-    /*border: 2px solid rgba(100, 98, 98, 0.856); !* grey *! */
     border: 1.1px solid black; /* grey */
     border-radius: 0.15vw;
-    /*box-shadow: 5px 10px #888888;*/
-    /*box-shadow: 1px 1px 1px 1px #888888;*/
     font-family: Arial;
     font-size: 1vw;
     padding: 0.35vw;
@@ -82,7 +80,7 @@ body {
 }
 
 .checkboxes-container {
-    margin-left: -8.7%;
+    margin-left: -10.7%;
     max-width: 30%;
     background: rgba(100, 98, 98, 0.856);
     padding-left: 0.5vw;
@@ -92,7 +90,7 @@ body {
 }
 
 .cell-image-row-container {
-    width : 37%;
+    width : 45%;
     height : 0%;
     margin: -1px;
     margin-left: 1%;
@@ -162,14 +160,14 @@ body {
     cursor: pointer;
     margin-top: 3%;
     margin-bottom: 6%;
-    margin-left: 50.5%;
+    margin-left: 48.75%;
     background: RGB(180,91,56);
     color: white;
     font: bold 1.5vw Arial;
     height: 3vw;
     width: 8vw;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
+    /*padding-left: 0.5vw;*/
+    /*padding-right: 0.5vw;*/
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
     border-top-left-radius: 10%;
@@ -191,10 +189,14 @@ body {
     margin-top: 2vw;
 }
 
+/* instructions page */
+#nextBtnInstructionsPage {
+    margin-left: 51.5vw;
+}
 
 /* login page */
 #resetLoginBtnDiv {
-    margin-left: 36.75%;
+    margin-left: 37%;
 }
 
 .right-btn-div {
@@ -234,7 +236,7 @@ body {
 }
 
 #previousBtnDiv {
-    margin-left: 43.5vw;
+    margin-left: 44vw;
 }
 
 #previousBtnDiv.review {
@@ -323,6 +325,7 @@ a:visited {
 }
 
 #overallScore {
+    text-align: center;
     margin-top: 1.5vw;
     margin-bottom: 0.75vw;
 }
@@ -337,8 +340,8 @@ a:visited {
 }
 
 #resultsImg {
-    width: 60%;
-    margin-left: 20%;
+    width: 70%;
+    margin-left: 15vw;
 }
 
 #bottomPadding {   
@@ -350,38 +353,42 @@ a:visited {
 }
 
 .message-div {
-    padding-top: 2%;
-    text-align: center;
-    font-size: 2vw; 
-}
-
-.show-type-btn {
-    cursor: pointer;
-    background: RGB(180,91,56);
-    color: white;
-    font: bold 1vw Arial;
-    margin-left: 41.5%;
-    width: 9vw;
-    padding-left: 0.5vw;
-    white-space: nowrap;
-    overflow: hidden;
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+    font: 1.75vw Arial;
+    margin-left: 15vw;
 }
 
 .show-all-type-btn {
     cursor: pointer;
     background: RGB(180,91,56);
     color: white;
-    font: bold 1vw Arial;
-    margin-left: 1%;
-    width: 9vw;
-    padding-left: 0.5vw;
+    font: bold 1.25vw Arial;
+    /*margin-left: 41.5%;*/
+    width: 12vw;
+    padding: 0.25vw;
+    border-radius: 10%;
+    /*padding-left: 0.5vw;*/
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.show-incorrect-type-btn {
+    cursor: pointer;
+    background: RGB(180,91,56);
+    color: white;
+    font: bold 1.25vw Arial;
+    /*margin-left: 41.5%;*/
+    width: 12vw;
+    padding: 0.29vw;
+    border-radius: 10%;
+    /*padding-left: 0.5vw;*/
     white-space: nowrap;
     overflow: hidden;
 }
 
 #objectsDiv {
-    font-family: Arial;
-    font-size: 1.15vw;
+    font: bold 1.5vw Arial;
     margin-top: 15vw;
 }
 
@@ -425,15 +432,61 @@ a:visited {
 }
 
 .object-type-labels, .data-message-divs {
-    display: inline-flex;
-}
-
-.show-all-type-btn, .show-type-btn {
     display: inline-block;
 }
 
-.line-breaks {
-    height: 1px;
-    background-color:rgba(100, 98, 98, 0.856);
+.object-div {
+    margin-bottom: 2vw;
+}
+
+.results-table-row {
+  /*border: 1px solid black;*/
+  table-layout: fixed;
+    color: RGB(61,69,67);
+  /*width: 300px;*/
+  margin-left: 4vw;
+}
+
+th,
+td {
+  /*border: 1px solid black;*/
+  width: 15vw;
+  overflow: hidden;
+}
+
+.right-flushed-row {
+    text-align: center;
+}
+
+.left-padded-column {
+    margin-left: 15vw;
+}
+
+.show-all-button-div {
+    margin-left: 1.5vw;
+}
+
+.show-incorrect-button-div {
+    margin-left: 0.5vw;
+}
+
+.results-header-buffer {
+    margin-bottom: 1vw;
+}
+
+.results-header-labels {
+    font: bold 1.75vw Arial;
+    color: RGB(61,69,67);
+}
+
+.results-row-buffer {
+    height: 0.1vw;
+    background-color: RGB(178,178,178);
+}
+
+.results-header-line {
+    height: 0.5vw;
+    background-color: RGB(178,178,178);
+    margin-top: -0.005vw;
 }
 
