@@ -16,7 +16,7 @@ function main() {
 
     setKeys(objectNumbers,objectInfo,answerKeys,objectTypes,originalObjectNumbers);
 
-    // renameObjects(objectNumbers);
+    renameObjects(objectNumbers);
 
     exports.originalObjectNumbers = originalObjectNumbers;
     exports.answerKeys = answerKeys;
@@ -43,7 +43,7 @@ function populateObjectInfo(objectInfo,rows) {
  */
 function getFileContents() {
     var fileContents = fs.readFileSync(__dirname + 
-        '/50_objects_AF_information.csv');
+        '/50_objects_information.csv');
 
     var rows = fileContents.toString().split(new RegExp('\r?\n'));
     return rows.splice(1,rows.length - 2);
@@ -84,7 +84,6 @@ function setKeys(objectNumbers,objectInfo,answerKeys,objectTypes,originalObjectN
  * @param {*} objectNumbers - 
  */
 function renameObjects(objectNumbers) {
-
     fs.readdirSync('./client_side_code/original_object_images').forEach(function(file,e) {
         var originalObjectNumber = getOriginalObjectNumber(file);
         changeObjectName(objectNumbers, file, originalObjectNumber);

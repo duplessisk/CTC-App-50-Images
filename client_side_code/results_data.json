@@ -1,15 +1,15 @@
 {
     "totalIncorrect": 50
 }{
-    "Apoptotic CTC": 3,
-    "White Blood Cell": 14,
-    "CTC": 14,
-    "Fluorescent Artifact": 10,
-    "CK/EpCAM Foci": 9
+    "CK/EpCAM Foci": 8,
+    "CTC": 15,
+    "White Blood Cell": 13,
+    "Fluorescent Artifact": 12,
+    "Apoptotic CTC": 2
 }{
-    "Apoptotic CTC": 3,
-    "White Blood Cell": 14,
-    "CTC": 14,
-    "Fluorescent Artifact": 10,
-    "CK/EpCAM Foci": 9
+    "CK/EpCAM Foci": 8,
+    "CTC": 15,
+    "White Blood Cell": 13,
+    "Fluorescent Artifact": 12,
+    "Apoptotic CTC": 2
 }

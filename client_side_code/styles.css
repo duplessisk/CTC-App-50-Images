@@ -186,6 +186,7 @@ body {
 
 /* welcome page */
 #beginBtnDiv {
+    margin-left: 5vw;
     margin-top: 2vw;
 }
 
@@ -236,7 +237,7 @@ body {
 }
 
 #previousBtnDiv {
-    margin-left: 44vw;
+    margin-left: 43.25vw;
 }
 
 #previousBtnDiv.review {

@@ -11,19 +11,19 @@ Test Version: AF Test 1
 
 Final Result: 0 out of 50 (0%), Fail
 
-Object Type Apoptotic CTC: Correct 0 out of 3 (0%)
-Objects Missed: 31, 41, 172
+Object Type CK/EpCAM Foci: Correct 0 out of 8 (0%)
+Objects Missed: 201, 212, 203, 207, 192, 177, 182, 208
 
-Object Type White Blood Cell: Correct 0 out of 14 (0%)
-Objects Missed: 117, 31, 165, 171, 173, 174, 175, 183, 184, 185, 186, 98, 100, 101
+Object Type CTC: Correct 0 out of 15 (0%)
+Objects Missed: 170, 180, 196, 179, 169, 166, 198, 168, 199, 167, 205, 197, 178, 200, 130
 
-Object Type CTC: Correct 0 out of 14 (0%)
-Objects Missed: 166, 167, 168, 169, 170, 178, 179, 180, 196, 197, 198, 199, 200, 205
+Object Type White Blood Cell: Correct 0 out of 13 (0%)
+Objects Missed: 184, 165, 49, 171, 164, 173, 175, 186, 112, 185, 47, 59, 183
 
-Object Type Fluorescent Artifact: Correct 0 out of 10 (0%)
-Objects Missed: 79, 84, 94, 116, 119, 176, 202, 206, 209, 213
+Object Type Fluorescent Artifact: Correct 0 out of 12 (0%)
+Objects Missed: 116, 176, 148, 84, 94, 202, 209, 119, 206, 213, 79, 147
 
-Object Type CK/EpCAM Foci: Correct 0 out of 9 (0%)
-Objects Missed: 177, 181, 182, 192, 201, 203, 207, 208, 212
+Object Type Apoptotic CTC: Correct 0 out of 2 (0%)
+Objects Missed: 31, 201
 
-Time Stamp: 2021-Apr-19, 5:39:34 AM
+Time Stamp: 2021-May-3, 3:02:18 PM
