@@ -16,7 +16,7 @@ function main() {
 
     setKeys(objectNumbers,objectInfo,answerKeys,objectTypes,originalObjectNumbers);
 
-    renameObjects(objectNumbers);
+    // renameObjects(objectNumbers);
 
     exports.originalObjectNumbers = originalObjectNumbers;
     exports.answerKeys = answerKeys;
