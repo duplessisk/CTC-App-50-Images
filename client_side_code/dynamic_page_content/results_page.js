@@ -24,7 +24,7 @@ async function main() {
     const objTypes = ["CTC", "ApoptoticCTC", "CK/EpCAMFoci", "WhiteBloodCell",
         "FluorescentArtifact", "SquamousCell"];
     const objLabels = ["Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell"];
-    const objDescription = ["CTC", "Apoptotic CTC", "CK/EpCAM Foci", "White Blood Cell", "Fluorescent Artifact", "SquamousCell"];
+    const objDescription = ["CTC", "Apoptotic CTC", "CK/EpCAM Foci", "White Blood Cell", "Fluorescent Artifact", "Squamous Cell"];
 
     createObjDivs(objTypes);
     
