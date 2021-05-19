@@ -22,9 +22,9 @@ async function main() {
 
     // To achieve specific object order wanted
     const objTypes = ["CTC", "ApoptoticCTC", "CK/EpCAMFoci", "WhiteBloodCell",
-        "FluorescentArtifact"];
-    const objLabels = ["Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell"];
-    const objDescription = ["CTC", "Apoptotic CTC", "CK/EpCAM Foci", "White Blood Cell", "Fluorescent Artifact"];
+        "FluorescentArtifact", "SquamousCell"];
+    const objLabels = ["Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell"];
+    const objDescription = ["CTC", "Apoptotic CTC", "CK/EpCAM Foci", "White Blood Cell", "Fluorescent Artifact", "SquamousCell"];
 
     createObjDivs(objTypes);
     
