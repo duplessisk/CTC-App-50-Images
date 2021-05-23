@@ -21,8 +21,7 @@ async function main() {
     setObjectPaths(allObjectPathsText, allTypesMap);
 
     // To achieve specific object order wanted
-    const objTypes = ["CTC", "CK/EpCAMFoci", "WhiteBloodCell",
-        "FluorescentArtifact", "SquamousCell"];
+    const objTypes = ["CTC", "CK/EpCAMFoci", "WhiteBloodCell", "FluorescentArtifact", "SquamousCell"];
     const objLabels = ["Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell"];
     const objDescription = ["CTC", "CK/EpCAM Foci", "White Blood Cell", "Fluorescent Artifact", "Squamous Cell"];
 
