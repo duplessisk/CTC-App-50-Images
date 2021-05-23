@@ -1,101 +1,101 @@
 {
-    "CK/EpCAM Foci": "/static/final_object_answers/object00.png"
+    "CTC": "/static/final_object_answers/object00.png"
 }{
-    "CK/EpCAM Foci": "/static/final_object_answers/object09.png"
-}{
-    "CK/EpCAM Foci": "/static/final_object_answers/object13.png"
-}{
-    "CK/EpCAM Foci": "/static/final_object_answers/object17.png"
-}{
-    "CK/EpCAM Foci": "/static/final_object_answers/object24.png"
-}{
-    "CK/EpCAM Foci": "/static/final_object_answers/object25.png"
-}{
-    "CK/EpCAM Foci": "/static/final_object_answers/object28.png"
-}{
-    "CK/EpCAM Foci": "/static/final_object_answers/object42.png"
-}{
-    "CK/EpCAM Foci": "/static/final_object_answers/object44.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object01.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object14.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object20.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object26.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object30.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object33.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object35.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object43.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object47.png"
-}{
-    "Fluorescent Artifact": "/static/final_object_answers/object48.png"
-}{
-    "Apoptotic CTC": "/static/final_object_answers/object02.png"
-}{
-    "Apoptotic CTC": "/static/final_object_answers/object27.png"
-}{
-    "Apoptotic CTC": "/static/final_object_answers/object29.png"
-}{
-    "Apoptotic CTC": "/static/final_object_answers/object38.png"
-}{
-    "Apoptotic CTC": "/static/final_object_answers/object49.png"
-}{
-    "CTC": "/static/final_object_answers/object03.png"
+    "CTC": "/static/final_object_answers/object04.png"
 }{
     "CTC": "/static/final_object_answers/object05.png"
 }{
-    "CTC": "/static/final_object_answers/object08.png"
+    "CTC": "/static/final_object_answers/object06.png"
 }{
-    "CTC": "/static/final_object_answers/object12.png"
+    "CTC": "/static/final_object_answers/object07.png"
 }{
-    "CTC": "/static/final_object_answers/object15.png"
+    "CTC": "/static/final_object_answers/object10.png"
 }{
-    "CTC": "/static/final_object_answers/object16.png"
+    "CTC": "/static/final_object_answers/object17.png"
 }{
-    "CTC": "/static/final_object_answers/object18.png"
-}{
-    "CTC": "/static/final_object_answers/object21.png"
+    "CTC": "/static/final_object_answers/object19.png"
 }{
     "CTC": "/static/final_object_answers/object22.png"
 }{
-    "CTC": "/static/final_object_answers/object34.png"
+    "CTC": "/static/final_object_answers/object28.png"
 }{
-    "CTC": "/static/final_object_answers/object36.png"
+    "CTC": "/static/final_object_answers/object29.png"
 }{
-    "CTC": "/static/final_object_answers/object41.png"
+    "CTC": "/static/final_object_answers/object45.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object04.png"
+    "CTC": "/static/final_object_answers/object46.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object06.png"
+    "White Blood Cell": "/static/final_object_answers/object01.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object07.png"
+    "White Blood Cell": "/static/final_object_answers/object02.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object10.png"
+    "White Blood Cell": "/static/final_object_answers/object09.png"
 }{
     "White Blood Cell": "/static/final_object_answers/object11.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object19.png"
+    "White Blood Cell": "/static/final_object_answers/object13.png"
+}{
+    "White Blood Cell": "/static/final_object_answers/object18.png"
+}{
+    "White Blood Cell": "/static/final_object_answers/object21.png"
 }{
     "White Blood Cell": "/static/final_object_answers/object23.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object31.png"
+    "White Blood Cell": "/static/final_object_answers/object25.png"
+}{
+    "White Blood Cell": "/static/final_object_answers/object30.png"
 }{
     "White Blood Cell": "/static/final_object_answers/object32.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object37.png"
+    "White Blood Cell": "/static/final_object_answers/object35.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object39.png"
+    "White Blood Cell": "/static/final_object_answers/object36.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object40.png"
+    "White Blood Cell": "/static/final_object_answers/object38.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object45.png"
+    "White Blood Cell": "/static/final_object_answers/object42.png"
 }{
-    "White Blood Cell": "/static/final_object_answers/object46.png"
+    "White Blood Cell": "/static/final_object_answers/object43.png"
+}{
+    "White Blood Cell": "/static/final_object_answers/object49.png"
+}{
+    "CK/EpCAM Foci": "/static/final_object_answers/object03.png"
+}{
+    "CK/EpCAM Foci": "/static/final_object_answers/object14.png"
+}{
+    "CK/EpCAM Foci": "/static/final_object_answers/object16.png"
+}{
+    "CK/EpCAM Foci": "/static/final_object_answers/object20.png"
+}{
+    "CK/EpCAM Foci": "/static/final_object_answers/object26.png"
+}{
+    "CK/EpCAM Foci": "/static/final_object_answers/object33.png"
+}{
+    "CK/EpCAM Foci": "/static/final_object_answers/object34.png"
+}{
+    "CK/EpCAM Foci": "/static/final_object_answers/object44.png"
+}{
+    "CK/EpCAM Foci": "/static/final_object_answers/object47.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object08.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object12.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object15.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object24.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object27.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object31.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object37.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object39.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object40.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object41.png"
+}{
+    "Fluorescent Artifact": "/static/final_object_answers/object48.png"
 }
