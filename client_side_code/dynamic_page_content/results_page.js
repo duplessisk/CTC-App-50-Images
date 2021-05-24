@@ -21,9 +21,18 @@ async function main() {
     setObjectPaths(allObjectPathsText, allTypesMap);
 
     // To achieve specific object order wanted
-    const objTypes = ["CTC", "CK/EpCAMFoci", "WhiteBloodCell", "FluorescentArtifact", "SquamousCell"];
-    const objLabels = ["Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell"];
-    const objDescription = ["CTC", "CK/EpCAM Foci", "White Blood Cell", "Fluorescent Artifact", "Squamous Cell"];
+    const objectInfo = await fetch('/static/test_info.txt');
+    const objectInfoRawText = String(await objectInfo.text());
+    const objectInfoLines = objectInfoRawText.split('\n')
+
+    const objDescriptions = objectInfoLines[1].split(',');
+    console.log('objDescriptions: ', objDescriptions)
+    const objTypes = getObjTypes(objDescriptions);
+    console.log('objTypes: ', objTypes)
+    const objLabels = objectInfoLines[2].split(',');
+    console.log('objLabels: ', objLabels)
+    // const objTypes = ["CTC", "CK/EpCAMFoci", "WhiteBloodCell", "FluorescentArtifact", "SquamousCell"];
+    // const objLabels = ["Cell", "Not Cell", "Not Cell", "Not Cell", "Not Cell"];
 
     createObjDivs(objTypes);
     
@@ -35,7 +44,7 @@ async function main() {
 
     setResultsMaps(resultsJsonText,incorrectNumTypesMap,totalNumTypesMap);
 
-    setResults(objTypes, objLabels, objDescription, incorrectNumTypesMap, totalNumTypesMap);
+    setResults(objTypes, objLabels, objDescriptions, incorrectNumTypesMap, totalNumTypesMap);
     createBtns(objTypes);
 
     var showBtnsClicked = [true,true,true,true,true,true];
@@ -54,6 +63,16 @@ async function main() {
 }
 
 main();
+
+
+function getObjTypes(objDescriptions) {
+    let objTypes = []
+    for (let i = 0; i < objDescriptions.length ; i++) {
+        console.log('objDescription: ', objDescriptions[i])
+        objTypes.push(objDescriptions[i].replace(/\s/g, ''))
+    }
+    return objTypes
+}
 
 
 /**
@@ -239,13 +258,13 @@ function createResultsHeader() {
 
 }
 
-function createResultsRow(i, objLabels, objDescription, totalNumThisTypeValue, incorrectNumThisTypeValue) {
+function createResultsRow(i, objLabels, objDescriptions, totalNumThisTypeValue, incorrectNumThisTypeValue) {
     var resultsTable = document.createElement('table');
     resultsTable.className = 'results-table-row'
     document.querySelector("#object" + i + "Div").appendChild(resultsTable)
     var resultsRow = resultsTable.insertRow(0);
     resultsRow.insertCell(0).innerHTML = objLabels[i];
-    resultsRow.insertCell(1).innerHTML = objDescription[i]
+    resultsRow.insertCell(1).innerHTML = objDescriptions[i]
     const totalNumThisType = resultsRow.insertCell(2);
     totalNumThisType.classList.add("right-flushed-row", "total-count-column");
     totalNumThisType.innerHTML = totalNumThisTypeValue;
@@ -278,7 +297,7 @@ function createResultsRow(i, objLabels, objDescription, totalNumThisTypeValue, i
  * Uses information stored within totalIncorrect, incorrectNumTypesMap, and 
  * totalNumTypesMap to add the appropriate user data to the DOM.
  */
-function setResults(objTypes, objLabels, objDescription, incorrectNumTypesMap, totalNumTypesMap) {
+function setResults(objTypes, objLabels, objDescriptions, incorrectNumTypesMap, totalNumTypesMap) {
     var totalCorrect = 50;
     var totalNumQuestions = 0;
 
@@ -290,7 +309,7 @@ function setResults(objTypes, objLabels, objDescription, incorrectNumTypesMap, t
         var totalNumThisTypeValue = totalNumTypesMap
             .get(objTypes[i]);
 
-        createResultsRow(i, objLabels, objDescription, totalNumThisTypeValue, incorrectNumThisTypeValue);
+        createResultsRow(i, objLabels, objDescriptions, totalNumThisTypeValue, incorrectNumThisTypeValue);
 
         const imgDiv = document.createElement('div');
         imgDiv.className = "img-div";

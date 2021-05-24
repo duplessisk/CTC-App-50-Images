@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 function main() {
 
@@ -84,11 +85,13 @@ function setKeys(objectNumbers,objectInfo,answerKeys,objectTypes,originalObjectN
  * @param {*} objectNumbers - 
  */
 function renameObjects(objectNumbers) {
-
-    fs.readdirSync('./client_side_code/original_object_images').forEach(function(file,e) {
-        var originalObjectNumber = getOriginalObjectNumber(file);
-        changeObjectName(objectNumbers, file, originalObjectNumber);
-    });
+    if (fs.existsSync('./client_side_code/original_object_images')) {
+        console.log('renaming objects!')
+        fs.readdirSync('./client_side_code/original_object_images').forEach(function(file,e) {
+            var originalObjectNumber = getOriginalObjectNumber(file);
+            changeObjectName(objectNumbers, file, originalObjectNumber);
+        });
+    }
 }
 
 /**

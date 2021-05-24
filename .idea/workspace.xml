@@ -4,9 +4,17 @@
     <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="more edits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client_side_code/all_object_paths.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/all_object_paths.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/dynamic_page_content/results_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/dynamic_page_content/results_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object19_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object24_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object31_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object41_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object72_AF.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client_side_code/results_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/results_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/test_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/test_info.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client_side_code/wrong_object_paths.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/wrong_object_paths.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final_results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final_results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_side_code/object_types.js" beforeDir="false" afterPath="$PROJECT_DIR$/server_side_code/object_types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +29,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="test1AF" />
+    <option name="BRANCH" value="cellcarta-prevalidation-af" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
