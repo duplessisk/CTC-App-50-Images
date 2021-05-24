@@ -1,18 +1,17 @@
-Test Taker: Kyle Duplessis
+Test Taker: kyle
 
 Affiliation Info: 
-Rarecyte
-12540 12th Ave NW
-Address Line Two
-Seattle, Washington, United States, 98177
+df
+df
+df, sa, fda, df
 
 Test: CellCarta Demo
 Test Version: AF Test 1
 
 Final Result: 0 out of 50 (0%), Fail
 
-Object Type CTC: Correct 0 out of 13 (0%)
-Objects Missed: 242, 75, 205, 166, 170, 198, 167, 71, 169, 197, 74, 93, 243
+Object Type CTC: Correct 0 out of 12 (0%)
+Objects Missed: 242, 75, 205, 166, 170, 198, 167, 169, 197, 74, 93, 243
 
 Object Type White Blood Cell: Correct 0 out of 17 (0%)
 Objects Missed: 165, 171, 126, 183, 100, 98, 80, 164, 117, 85, 96, 101, 87, 184, 123, 99, 97
@@ -23,4 +22,7 @@ Objects Missed: 82, 81, 203, 88, 90, 89, 78, 73, 192
 Object Type Fluorescent Artifact: Correct 0 out of 11 (0%)
 Objects Missed: 206, 119, 84, 79, 77, 86, 76, 116, 202, 209, 94
 
-Time Stamp: 2021-May-22, 1:21:46 PM
+Object Type Squamous Cell: Correct 0 out of 1 (0%)
+Objects Missed: 71
+
+Time Stamp: 2021-May-22, 1:39:17 PM

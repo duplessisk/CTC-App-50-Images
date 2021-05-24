@@ -13,8 +13,6 @@
 }{
     "CTC": "/static/final_object_answers/object17.png"
 }{
-    "CTC": "/static/final_object_answers/object19.png"
-}{
     "CTC": "/static/final_object_answers/object22.png"
 }{
     "CTC": "/static/final_object_answers/object28.png"
@@ -98,4 +96,6 @@
     "Fluorescent Artifact": "/static/final_object_answers/object41.png"
 }{
     "Fluorescent Artifact": "/static/final_object_answers/object48.png"
+}{
+    "Squamous Cell": "/static/final_object_answers/object19.png"
 }

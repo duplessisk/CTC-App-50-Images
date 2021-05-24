@@ -1,13 +1,15 @@
 {
     "totalIncorrect": 50
 }{
-    "CTC": 13,
+    "CTC": 12,
     "White Blood Cell": 17,
     "CK/EpCAM Foci": 9,
-    "Fluorescent Artifact": 11
+    "Fluorescent Artifact": 11,
+    "Squamous Cell": 1
 }{
-    "CTC": 13,
+    "CTC": 12,
     "White Blood Cell": 17,
     "CK/EpCAM Foci": 9,
-    "Fluorescent Artifact": 11
+    "Fluorescent Artifact": 11,
+    "Squamous Cell": 1
 }
