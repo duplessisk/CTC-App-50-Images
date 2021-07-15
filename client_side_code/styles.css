@@ -28,7 +28,7 @@ body {
 }
 
 #headerImage {
-    margin-left: 11.5%;
+    margin-left: 9.80%;
     width: 80%;
     height: auto;
     position: fixed;
@@ -107,7 +107,7 @@ body {
 
 #progressPageDiv {
     margin-top: -4%;
-    margin-left: 51.25%;
+    margin-left: 50.6%;
     font-family: Arial;
     font-size: 1.25vw;
 }
@@ -237,7 +237,7 @@ body {
 }
 
 #previousBtnDiv {
-    margin-left: 43.25vw;
+    margin-left: 43.5vw;
 }
 
 #previousBtnDiv.review {
