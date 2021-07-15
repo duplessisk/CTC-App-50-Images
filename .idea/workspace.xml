@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="more edits">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/all_object_paths.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/all_object_paths.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/results_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/results_data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/wrong_object_paths.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/wrong_object_paths.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final_results.txt" afterDir="false" />
-    </list>
+    <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="more edits" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +15,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="test1AF" />
+    <option name="BRANCH" value="cellcarta-prevalidation-af" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
