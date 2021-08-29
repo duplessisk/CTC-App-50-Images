@@ -1,1 +1,3 @@
 CellCarta Demo,AF Test 1
+CTC, CK/EpCAM Foci, White Blood Cell, Fluorescent Artifact, Squamous Cell
+Cell, Not Cell, Not Cell, Not Cell, Not Cell

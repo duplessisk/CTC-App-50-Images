@@ -14,7 +14,7 @@ body {
 }
 
 #welcomeImage {
-    margin-left: 12%;
+    margin-left: 11%;
     width: 80%;
     height: auto;
     top: 0;
@@ -28,7 +28,7 @@ body {
 }
 
 #headerImage {
-    margin-left: 9.80%;
+    margin-left: 11.5%;
     width: 80%;
     height: auto;
     position: fixed;
@@ -37,7 +37,7 @@ body {
 }
 
 #headerImageDiv {
-    margin-bottom: 18.5vw;
+    margin-bottom: 18.35vw;
 }
 
 /* login page */
@@ -107,7 +107,7 @@ body {
 
 #progressPageDiv {
     margin-top: -4%;
-    margin-left: 50.6%;
+    margin-left: 51.25%;
     font-family: Arial;
     font-size: 1.25vw;
 }
@@ -186,13 +186,12 @@ body {
 
 /* welcome page */
 #beginBtnDiv {
-    margin-left: 5vw;
     margin-top: 2vw;
 }
 
 /* instructions page */
 #nextBtnInstructionsPage {
-    margin-left: 49vw;
+    margin-left: 51.5vw;
 }
 
 /* login page */
@@ -237,7 +236,7 @@ body {
 }
 
 #previousBtnDiv {
-    margin-left: 43.5vw;
+    margin-left: 44vw;
 }
 
 #previousBtnDiv.review {

@@ -3,27 +3,28 @@ Test Taker: Kyle Duplessis
 Affiliation Info: 
 Rarecyte
 12540 12th Ave NW
-Address Line Two
+Addrfd
 Seattle, Washington, United States, 98177
 
 Test: CellCarta Demo
 Test Version: AF Test 1
+CTC
 
 Final Result: 0 out of 50 (0%), Fail
 
-Object Type CK/EpCAM Foci: Correct 0 out of 8 (0%)
-Objects Missed: 201, 212, 203, 207, 192, 177, 182, 208
+Object Type CTC: Correct 0 out of 12 (0%)
+Objects Missed: 242, 75, 205, 166, 170, 198, 167, 169, 197, 74, 93, 243
 
-Object Type CTC: Correct 0 out of 15 (0%)
-Objects Missed: 170, 180, 196, 179, 169, 166, 198, 168, 199, 167, 205, 197, 178, 200, 130
+Object Type White Blood Cell: Correct 0 out of 17 (0%)
+Objects Missed: 165, 171, 126, 183, 100, 98, 80, 164, 117, 85, 96, 101, 87, 184, 123, 99, 97
 
-Object Type White Blood Cell: Correct 0 out of 13 (0%)
-Objects Missed: 184, 165, 49, 171, 164, 173, 175, 186, 112, 185, 47, 59, 183
+Object Type CK/EpCAM Foci: Correct 0 out of 9 (0%)
+Objects Missed: 82, 81, 203, 88, 90, 89, 78, 73, 192
 
-Object Type Fluorescent Artifact: Correct 0 out of 12 (0%)
-Objects Missed: 116, 176, 148, 84, 94, 202, 209, 119, 206, 213, 79, 147
+Object Type Fluorescent Artifact: Correct 0 out of 11 (0%)
+Objects Missed: 206, 119, 84, 79, 77, 86, 76, 116, 202, 209, 94
 
-Object Type Apoptotic CTC: Correct 0 out of 2 (0%)
-Objects Missed: 31, 201
+Object Type Squamous Cell: Correct 0 out of 1 (0%)
+Objects Missed: 71
 
-Time Stamp: 2021-May-3, 3:02:18 PM
+Time Stamp: 2021-May-24, 4:35:22 AM
