@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="changed db">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="changed object name">
+      <change beforePath="$PROJECT_DIR$/client_side_code/final_object_images/Object10.png" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/final_object_images/Object10.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630246883263</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="changed object name">
+      <created>1630247452848</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1630247452848</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +327,7 @@
     <MESSAGE value="all cell categories to be entered into text file and renaming of objects will be handled automatically" />
     <MESSAGE value="works!" />
     <MESSAGE value="changed db" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed db" />
+    <MESSAGE value="changed object name" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed object name" />
   </component>
 </project>
