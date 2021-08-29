@@ -14,7 +14,7 @@ body {
 }
 
 #welcomeImage {
-    margin-left: 12%;
+    margin-left: 8.5%;
     width: 80%;
     height: auto;
     top: 0;
@@ -28,7 +28,7 @@ body {
 }
 
 #headerImage {
-    margin-left: 11.5%;
+    margin-left: 9.6%;
     width: 80%;
     height: auto;
     position: fixed;
@@ -191,7 +191,7 @@ body {
 
 /* instructions page */
 #nextBtnInstructionsPage {
-    margin-left: 51.5vw;
+    margin-left: 49.5vw;
 }
 
 /* login page */

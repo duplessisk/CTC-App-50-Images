@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="all cell categories to be entered into text file and renaming of objects will be handled automatically">
+      <change afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_side_code/final_object_images/Object10.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/all_object_paths.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/all_object_paths.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_answers/Object186_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object119_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object173_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object180_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object209_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object310_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object31_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object84_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object94_AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/results_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/results_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/test_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/test_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_side_code/wrong_object_paths.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/wrong_object_paths.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final_results.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server_side_code/object_types.js" beforeDir="false" afterPath="$PROJECT_DIR$/server_side_code/object_types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +101,8 @@
       <workItem from="1621738570960" duration="3231000" />
       <workItem from="1621871996165" duration="42000" />
       <workItem from="1626366591863" duration="67000" />
+      <workItem from="1630078729548" duration="3145000" />
+      <workItem from="1630242987845" duration="165000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1617323924111</created>
