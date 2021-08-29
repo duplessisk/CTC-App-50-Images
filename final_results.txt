@@ -1,30 +1,30 @@
 Test Taker: Kyle Duplessis
 
 Affiliation Info: 
-Rarecyte
+Rarecytedaf
 12540 12th Ave NW
-Addrfd
+Address Line Two
 Seattle, Washington, United States, 98177
 
-Test: CellCarta Demo
-Test Version: AF Test 1
+Test: Internal Test
+Test Version: CLIA Test
 CTC
 
 Final Result: 0 out of 50 (0%), Fail
 
-Object Type CTC: Correct 0 out of 12 (0%)
-Objects Missed: 242, 75, 205, 166, 170, 198, 167, 169, 197, 74, 93, 243
+Object Type Fluorescent Artifact: Correct 0 out of 8 (0%)
+Objects Missed: 79, 306, 148, 202, 307, 305, 147, 116
 
-Object Type White Blood Cell: Correct 0 out of 17 (0%)
-Objects Missed: 165, 171, 126, 183, 100, 98, 80, 164, 117, 85, 96, 101, 87, 184, 123, 99, 97
+Object Type CTC: Correct 0 out of 15 (0%)
+Objects Missed: 309, 318, 300, 312, 179, 313, 308, 319, 320, 302, 130, 301, 317, 205, 197
 
-Object Type CK/EpCAM Foci: Correct 0 out of 9 (0%)
-Objects Missed: 82, 81, 203, 88, 90, 89, 78, 73, 192
+Object Type CK/EpCAM Foci: Correct 0 out of 10 (0%)
+Objects Missed: 207, 177, 311, 212, 314, 203, 208, 201, 192, 182
 
-Object Type Fluorescent Artifact: Correct 0 out of 11 (0%)
-Objects Missed: 206, 119, 84, 79, 77, 86, 76, 116, 202, 209, 94
+Object Type Apoptotic CTC: Correct 0 out of 4 (0%)
+Objects Missed: 304, 315, 316, 303
 
-Object Type Squamous Cell: Correct 0 out of 1 (0%)
-Objects Missed: 71
+Object Type White Blood Cell: Correct 0 out of 13 (0%)
+Objects Missed: 49, 79, 47, 59, 164, 184, 183, 112, 321, 185, 322, 323, 165
 
-Time Stamp: 2021-May-24, 4:35:22 AM
+Time Stamp: 2021-Aug-28, 11:59:54 PM
