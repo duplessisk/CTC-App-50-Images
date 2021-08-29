@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="all cell categories to be entered into text file and renaming of objects will be handled automatically">
-      <change afterPath="$PROJECT_DIR$/client_side_code/final_object_answers/object10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client_side_code/final_object_images/Object10.png" afterDir="false" />
+    <list default="true" id="f181b859-f280-4769-8ca4-4a426fd5bf2a" name="Default Changelist" comment="changed db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/all_object_paths.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/all_object_paths.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_answers/Object186_AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object119_AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object173_AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object180_AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object209_AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object310_AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object31_AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object84_AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/original_object_images/Object94_AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/results_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/results_data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/test_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/test_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_side_code/wrong_object_paths.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_side_code/wrong_object_paths.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final_results.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_side_code/object_types.js" beforeDir="false" afterPath="$PROJECT_DIR$/server_side_code/object_types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +268,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621883288496</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="meh">
+      <created>1630246535180</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1630246535180</updated>
+    </task>
+    <task id="LOCAL-00028" summary="changed db">
+      <created>1630246883263</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1630246883263</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +318,8 @@
     <MESSAGE value="added squameous cell to results js" />
     <MESSAGE value="more edits" />
     <MESSAGE value="all cell categories to be entered into text file and renaming of objects will be handled automatically" />
-    <option name="LAST_COMMIT_MESSAGE" value="all cell categories to be entered into text file and renaming of objects will be handled automatically" />
+    <MESSAGE value="works!" />
+    <MESSAGE value="changed db" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed db" />
   </component>
 </project>
