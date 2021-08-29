@@ -30,7 +30,7 @@ const schema = new mongoose.Schema({
     wrongObjectsByPage: Object,
 });
 
-const Client = mongoose.model('cellcarta-prevalidation-af', schema);
+const Client = mongoose.model('CLIA-prevalidation-af', schema);
 
 console.log();
 console.log("server starting...");
