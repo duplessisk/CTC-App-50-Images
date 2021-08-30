@@ -85,6 +85,7 @@
       <workItem from="1626366591863" duration="67000" />
       <workItem from="1630078729548" duration="3145000" />
       <workItem from="1630242987845" duration="165000" />
+      <workItem from="1630338060534" duration="2403000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1617323924111</created>
@@ -289,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630247452848</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="added xml">
+      <created>1630249431405</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1630249431405</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +336,7 @@
     <MESSAGE value="works!" />
     <MESSAGE value="changed db" />
     <MESSAGE value="changed object name" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed object name" />
+    <MESSAGE value="added xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added xml" />
   </component>
 </project>
