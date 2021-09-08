@@ -8,15 +8,18 @@ const originalObjectNumbers = require("./object_types");
 const answerKeys = require("./object_types");
 const objectTypes = require("./object_types");
 const nodemailer = require("nodemailer");
+const vhost = require('vhost');
+
 require("dotenv").config({ path: path.resolve(__dirname, './.env') });
 
-const app = express();
+// App 1
+const main = express();
 
-app.set('view engine', 'ejs');
+main.set('view engine', 'ejs');
 
-app.use('/static', express.static('client_side_code'));
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(cookieParser());
+main.use('/static', express.static('client_side_code'));
+main.use(bodyParser.urlencoded({extended: true}));
+main.use(cookieParser());
 
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, 
     useUnifiedTopology: true , useFindAndModify: false });
@@ -32,6 +35,29 @@ const schema = new mongoose.Schema({
 
 const Client = mongoose.model('CLIA-prevalidation-af', schema);
 
+
+// App 2
+const redirect = express();
+
+redirect.use(function(req, res){
+    console.log(req.vhost)
+    if (!module.parent) console.log(req.vhost);
+    res.redirect('https://ctc-af-prevalidation-demo.herokuapp.com/' + req.vhost[0]);
+})
+
+//Vhost app
+
+var app = module.exports = express();
+
+app.use(vhost('*.example.com', redirect)); // Serves all subdomains via Redirect app
+app.use(vhost('example.com', main)); // Serves top level domain via Main server app
+
+/* istanbul ignore next */
+if (!module.parent) {
+  app.listen(process.env.PORT || 3000);
+  console.log('Express started on port 3000');
+}
+
 console.log();
 console.log("server starting...");
 
@@ -41,95 +67,95 @@ const TEST_VERSION = TEST_INFO[1]
 const NUM_QUESTIONS = 50
 
 // welcome page
-app.get("/", function(request,response) {
+main.get("/", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/welcome_page.html'));
 });
-app.post("/html_pages/welcome_page", function(request,response) {
+main.post("/html_pages/welcome_page", function(request,response) {
     response.redirect('/html_pages/login_page');
 });
 
 // login page
-app.get("/html_pages/login_page", function(request,response) {
+main.get("/html_pages/login_page", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/login_page.html'));
 });
-app.post("/html_pages/login_page", function(request,response) {
+main.post("/html_pages/login_page", function(request,response) {
     setClientCookie(request, response);
     response.redirect('/html_pages/instructions_page');
 });
 
 // instructions page
-app.get("/html_pages/instructions_page", function(request,response) {
+main.get("/html_pages/instructions_page", function(request,response) {
     initClientDocument(request, response);
 });
-app.post("/html_pages/instructions_page", function(request,response) {
+main.post("/html_pages/instructions_page", function(request,response) {
     response.redirect('/html_pages/page_1');
 });
 
 // instructions page 2 (after the instructions have already been viewed once)
-app.get("/html_pages/instructions_page_2", function(request,response) {
+main.get("/html_pages/instructions_page_2", function(request,response) {
     response.sendFile(path.join(__dirname + 
         '/html_pages/instructions_page_2.html'));
 });
-app.post("/html_pages/instructions_page_2", function(request,response) {
+main.post("/html_pages/instructions_page_2", function(request,response) {
     response.redirect('/html_pages/page_1');
 });
 
 
 // page 1
-app.get("/html_pages/page_1", function(request,response) {
+main.get("/html_pages/page_1", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/page_1.html'));
 });
-app.post("/html_pages/page_1", function(request,response) {
+main.post("/html_pages/page_1", function(request,response) {
     processPage(request, 1, true);                      
     redirectPage(request, response, '/html_pages/instructions_page_2', 
         '/html_pages/page_2', '/html_pages/review_page');
 });
 
 // page 2
-app.get("/html_pages/page_2", function(request,response) {
+main.get("/html_pages/page_2", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/page_2.html'));
 });
-app.post("/html_pages/page_2", function(request,response) {
+main.post("/html_pages/page_2", function(request,response) {
     processPage(request, 2, true);
     redirectPage(request, response, '/html_pages/page_1', '/html_pages/page_3',
         '/html_pages/review_page');
 });
 
 // page 3
-app.get("/html_pages/page_3", function(request,response) {
+main.get("/html_pages/page_3", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/page_3.html'));
 });
-app.post("/html_pages/page_3", function(request,response) {
+main.post("/html_pages/page_3", function(request,response) {
     processPage(request, 3, true);
     redirectPage(request, response, '/html_pages/page_2', '/html_pages/page_4',
         '/html_pages/review_page');
 });
 
 // page 4
-app.get("/html_pages/page_4", function(request,response) {
+main.get("/html_pages/page_4", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/page_4.html'));
 });
-app.post("/html_pages/page_4", function(request,response) {
+main.post("/html_pages/page_4", function(request,response) {
     processPage(request, 4, true);
     redirectPage(request, response, '/html_pages/page_3','/html_pages/page_5',
         '/html_pages/review_page');
 });
 
 // page 5
-app.get("/html_pages/page_5", function(request,response) {
+main.get("/html_pages/page_5", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/page_5.html'));
 });
-app.post("/html_pages/page_5", function(request,response) {
+main.post("/html_pages/page_5", function(request,response) {
     processPage(request, 5, true);
     redirectPage(request, response, '/html_pages/page_4',
         '/html_pages/review_page','/html_pages/review_page');
 });
 
 // review page
-app.get("/html_pages/review_page", function(request,response) {
+main.get("/html_pages/review_page", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/review_page.html'));
 });
-app.post("/html_pages/review_page", function(request,response) {
+main.post("/html_pages/review_page", function(request,response) {
     
     var id = request.cookies['session_id'];
 
@@ -181,17 +207,17 @@ app.post("/html_pages/review_page", function(request,response) {
 });
 
 // results page 
-app.get("/html_pages/results_page", function(request,response) {
+main.get("/html_pages/results_page", function(request,response) {
     response.sendFile(path.join(__dirname + '/html_pages/results_page.html'));
 });
 
 // page already submitted
-app.get("/html_pages/form_already_submitted_page", function(request,response) {
+main.get("/html_pages/form_already_submitted_page", function(request,response) {
     response.sendFile(path.join(__dirname + 
         '/html_pages/form_already_submitted_page.html'));
 });
 
-app.listen(process.env.PORT || 3000);
+// main.listen(process.env.PORT || 3000);
 
 /**
  * Sets a cookie for each client.
@@ -290,7 +316,7 @@ function processPage(request, pageNumber, notComingFromReviewPage) {
  * each page in the client side form.
  * @param {Array} answerKey - Contains all answers for this page. 
  * @param {http} request - Client http request to the server.
- * @param {number} pageNumber - App page number (1-5) client is on.
+ * @param {number} pageNumber - main page number (1-5) client is on.
  */
 function getClientResponses(request) {
     var clientResponses = initClientResponses(request);
@@ -340,7 +366,7 @@ function setClientResponses(clientResponses) {
  * @param {http} request - Client http request to the server.
  * @param {Array} answerKey - Contains all answers for this page. 
  * @param {Array} clientResponses - Contains client responses for each object.
- * @param {number} pageNumber - App page number (1-5) client is on.
+ * @param {number} pageNumber - main page number (1-5) client is on.
  */
 function setWrongObjectsByPage(request,answerKey,clientResponses,pageNumber) {
 
